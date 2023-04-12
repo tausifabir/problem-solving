@@ -33,8 +33,37 @@ public class Main {
     //patternProblem.patternProblems(4);
     //patternProblem.hollowPatternProblems(5);
     //patternProblem.pyramidPatternProblems(5);
-    patternProblem.pyramidReversePatternProblems(4);
-    patternProblem.pyramidInvertedPatternProblems(4);
+    //patternProblem.pyramidReversePatternProblems(4);
+    //patternProblem.pyramidInvertedPatternProblems(4);
+
+    // Practicing LinkedList Basic operation
+      PracticeLinkedList pLinkedList = new PracticeLinkedList();
+      pLinkedList.addFirst("a");
+      pLinkedList.addFirst("is");
+
+      // printing LinkedList
+      pLinkedList.printList();
+
+      // addLast
+      pLinkedList.addLast("LinkedList");
+      pLinkedList.addLast("List");
+      pLinkedList.addFirst("This");
+      pLinkedList.printList();
+
+
+      pLinkedList.deleteLast();
+      pLinkedList.printList();
+      pLinkedList.getLinkedListSize();
+      pLinkedList.deleteFirst();
+      pLinkedList.printList();
+      pLinkedList.deleteLast();
+      pLinkedList.deleteLast();
+      pLinkedList.printList();
+      pLinkedList.deleteFirst();
+      pLinkedList.printList();
+      pLinkedList.addFirst("This");
+      pLinkedList.printList();
+      pLinkedList.getLinkedListSize();
   }
 
 
