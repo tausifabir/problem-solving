@@ -10,8 +10,8 @@ public class PatternProblem {
    *
    * */
   void solidRectanglePatternProblem(int numberOfStars){
-    for(int i=0; i<numberOfStars;i++){
-      for(int j=0; j<numberOfStars;j++){
+    for(int i=0; i<numberOfStars;i++){     // i-> columns
+      for(int j=0; j<numberOfStars;j++){   // j-> rows
         System.out.print("*");
       }
       System.out.println();
