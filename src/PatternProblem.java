@@ -19,7 +19,7 @@ public class PatternProblem {
   }
 
 
-  // Hallow Pattern
+  // Hollow Pattern
   /*
    * Expected Output->  *****
                         *   *
@@ -27,7 +27,7 @@ public class PatternProblem {
                         *****
    *
    * */
-   void hollowPatternProblems(int numberOfStars){
+   void hollowPatternProblem(int numberOfStars){
 
     // First Approach
     for(int i=0; i<4;i++){
@@ -59,7 +59,7 @@ public class PatternProblem {
 
   }
 
-  // pyramid Pattern
+  // half pyramid Pattern
   /*
    * Expected Output->  *
                         **
@@ -67,7 +67,7 @@ public class PatternProblem {
                         *****
    *
    * */
-  void pyramidPatternProblems(int numberOfStars){
+  void halfPyramidPatternProblem(int numberOfStars){
     for(int i=0; i<numberOfStars;i++){
       for(int j=0;j<i;j++){
         System.out.print("*");
@@ -77,7 +77,7 @@ public class PatternProblem {
     }
   }
 
-  // pyramid Pattern
+  // half pyramid Reverse Pattern
   /*
    * Expected Output->  ****
                         ***
@@ -85,7 +85,7 @@ public class PatternProblem {
                         *
    *
    * */
-  void pyramidReversePatternProblems(int numberOfStars){
+  void halfPyramidReversePatternProblem(int numberOfStars){
 
     // TODO: need to understand better of this logic pattern
     for(int i=numberOfStars; i>=1;i--){
@@ -98,7 +98,7 @@ public class PatternProblem {
   }
 
 
-  // pyramid Pattern
+  // half Pyramid Inverted Pattern (rotated by 180 deg)
   /*
    * Expected Output->     *
                           **
@@ -106,7 +106,35 @@ public class PatternProblem {
                         ****
    *
    * */
-  void pyramidInvertedPatternProblems(int numberOfStars){
+  void halfPyramidInvertedPatternProblem(int numberOfStars){
+
+    // TODO: need to understand better of this logic pattern
+    for(int i=0; i<numberOfStars;i++){
+
+      for(int j=0;j<numberOfStars-i;j++){
+        System.out.print(" ");
+      }
+
+      for(int j=0;j<=i;j++){
+        System.out.print("*");
+      }
+      System.out.println();
+
+    }
+  }
+
+
+  // half pyramid Pattern with numbers
+  /*
+   * Expected Output->
+                         1
+                         12
+                         123
+                         1234
+                         1235
+   *
+   * */
+  void halfPyramidPatternWithNumbersProblem(int numberOfStars){
 
     // TODO: need to understand better of this logic pattern
     for(int i=0; i<numberOfStars;i++){
