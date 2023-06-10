@@ -30,7 +30,7 @@ public class Main {
 
     // Pattern Problems Practice
     PatternProblem patternProblem = new PatternProblem();
-    //patternProblem.patternProblems(4);
+    patternProblem.solidRectanglePatternProblem(4);
     //patternProblem.hollowPatternProblems(5);
     //patternProblem.pyramidPatternProblems(5);
     //patternProblem.pyramidReversePatternProblems(4);

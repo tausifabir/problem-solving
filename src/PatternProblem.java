@@ -1,10 +1,15 @@
-import java.util.*;
-
 public class PatternProblem {
 
 
   // Rectangle Pattern
-  void patternProblems(int numberOfStars){
+  /*
+   * Expected Output->  ****
+                        ****
+                        ****
+                        ****
+   *
+   * */
+  void solidRectanglePatternProblem(int numberOfStars){
     for(int i=0; i<numberOfStars;i++){
       for(int j=0; j<numberOfStars;j++){
         System.out.print("*");
