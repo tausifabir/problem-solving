@@ -136,15 +136,35 @@ public class PatternProblem {
    * */
   void halfPyramidPatternWithNumbersProblem(int numberOfStars){
 
-    // TODO: need to understand better of this logic pattern
-    for(int i=0; i<numberOfStars;i++){
 
-      for(int j=0;j<numberOfStars-i;j++){
-        System.out.print(" ");
+    for(int i=1; i<=numberOfStars;i++){
+
+      for(int j=1;j<=i;j++){
+        System.out.print(j+" ");
       }
+      System.out.println();
 
-      for(int j=0;j<=i;j++){
-        System.out.print("*");
+    }
+  }
+
+
+  // half pyramid inverted Pattern with numbers
+  /*
+   * Expected Output->
+                         12345
+                         1234
+                         123
+                         12
+                         1
+   *
+   * */
+  void halfPyramidInvertedPatternWithNumbersProblem(int numberOfStars){
+
+
+    for(int i=1; i<=numberOfStars;i++){
+
+      for(int j=1;j<=numberOfStars-i+1;j++){
+        System.out.print(j+" ");
       }
       System.out.println();
 

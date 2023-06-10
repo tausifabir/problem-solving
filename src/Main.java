@@ -30,11 +30,13 @@ public class Main {
 
     // Pattern Problems Practice
     PatternProblem patternProblem = new PatternProblem();
-    /*patternProblem.solidRectanglePatternProblem(4);
-    patternProblem.hollowPatternProblem(5);
-    patternProblem.halfPyramidPatternProblem(5);
-    patternProblem.halfPyramidReversePatternProblem(4);*/
-    patternProblem.halfPyramidInvertedPatternProblem(4);
+    //patternProblem.solidRectanglePatternProblem(4);
+    //patternProblem.hollowPatternProblem(5);
+    //patternProblem.halfPyramidPatternProblem(5);
+    //patternProblem.halfPyramidReversePatternProblem(4);
+    //patternProblem.halfPyramidInvertedPatternProblem(4);
+    //patternProblem.halfPyramidPatternWithNumbersProblem(5);
+    patternProblem.halfPyramidInvertedPatternWithNumbersProblem(5);
 
     // Practicing LinkedList Basic operation
       PracticeLinkedList pLinkedList = new PracticeLinkedList();
