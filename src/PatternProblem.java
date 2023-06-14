@@ -222,4 +222,33 @@ public class PatternProblem {
     }
   }
 
+
+
+  // solid rhombus
+  /*
+   * Expected Output->
+                         ----*****
+                         ---*****-
+                         --*****--
+                         -*****---
+                         *****----
+   *
+   * */
+
+  //TODO: need implement this work exercise
+  void solidRhombusProblem(int numberOfStars){
+
+    for(int i=0; i<=numberOfStars;i++){
+
+      for(int j=0;j<=numberOfStars-i;j++){
+        System.out.print("-");
+      }
+
+      for(int j=0;j<=i;j++){
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+
 }

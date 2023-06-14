@@ -38,7 +38,8 @@ public class Main {
     //patternProblem.halfPyramidPatternWithNumbersProblem(5);
     //patternProblem.halfPyramidInvertedPatternWithNumbersProblem(5);
     //patternProblem.floydTriangleProblem(5);
-    patternProblem.zeroOneTriangleProblem(5);
+    //patternProblem.zeroOneTriangleProblem(5);
+    patternProblem.solidRhombusProblem(5);
 
     // Practicing LinkedList Basic operation
       PracticeLinkedList pLinkedList = new PracticeLinkedList();
