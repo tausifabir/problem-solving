@@ -1,5 +1,6 @@
 import java.text.ParseException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -7,7 +8,9 @@ public class Main {
 
   public static void main(String[] args) throws ParseException {
 
-    int[] nums = new int[]{1, 2, 3, 4, 5, 8, 3};
+    ContainsDuplicateLeetCode codeProblems = new ContainsDuplicateLeetCode();
+    RomanToIntegerLeetCode romanToIntegerLeetCode = new RomanToIntegerLeetCode();
+
     String[] strs = new String[]{"Flight", "Flow", "Flower"};
     String strs2 = "]";
 
@@ -15,11 +18,29 @@ public class Main {
     ArrayList<Integer> numberList2 = new ArrayList<Integer>(){{add(113);add(31);add(27);}};
 
 
-    //boolean result = containsDuplicate(nums);
+    System.out.println();
+
+    // Leet Code 217: Contains Duplicate set Problem TestCase
+    int[] nums1 = new int[]{1, 2, 3, 4, 5, 8};
+    int[] nums2 = new int[]{1,2,3,1};
+    int[] nums3 = new int[]{1,1,1,3,3,4,3,2,4,2};
+    int[] nums4 = new int[]{1,2,3,4};
+    // LeetCode 217: Contains Duplicate
+    //System.out.println("Leet Code 217: Contains Duplicate:  "+codeProblems.containsDuplicate(nums3));
+    //System.out.println("Leet Code 217: Contains Duplicate:  "+codeProblems.containsDuplicateBeginnerApproach(nums4));
+    //System.out.println("Leet Code 217: Contains Duplicate:  "+codeProblems.containsDuplicateSetApproach(nums3));
+
+
+    // Leet Code 13: Roman to Integer set Problem TestCase
+    String s1 = "III";
+    String s2 = "LVIII";
+    String s3 = "MCMXCIV";
+    // LeetCode 217: Contains Duplicate
+    System.out.println("Leet Code 13: Roman to Integer:  "+romanToIntegerLeetCode.romanToInt(s3));
+
     //String str = longestCommonPrefix(strs);
 
-    // containsDuplicate
-    //System.out.println(result);
+
 
 
     // longestCommonPrefix
@@ -29,7 +50,7 @@ public class Main {
     //System.out.println(mergedTwoUnsortedList(numberList1,numberList2));
 
     // Pattern Problems Practice
-    PatternProblem patternProblem = new PatternProblem();
+    //PatternProblem patternProblem = new PatternProblem();
     //patternProblem.solidRectanglePatternProblem(4);
     //patternProblem.hollowPatternProblem(5);
     //patternProblem.halfPyramidPatternProblem(5);
@@ -39,7 +60,7 @@ public class Main {
     //patternProblem.halfPyramidInvertedPatternWithNumbersProblem(5);
     //patternProblem.floydTriangleProblem(5);
     //patternProblem.zeroOneTriangleProblem(5);
-    patternProblem.solidRhombusProblem(5);
+    //patternProblem.solidRhombusProblem(5);
 
     // Practicing LinkedList Basic operation
       PracticeLinkedList pLinkedList = new PracticeLinkedList();
@@ -47,55 +68,32 @@ public class Main {
       pLinkedList.addFirst("is");
 
       // printing LinkedList
-      pLinkedList.printList();
+     // pLinkedList.printList();
 
       // addLast
       pLinkedList.addLast("LinkedList");
       pLinkedList.addLast("List");
       pLinkedList.addFirst("This");
-      pLinkedList.printList();
+      //pLinkedList.printList();
 
 
-      pLinkedList.deleteLast();
-      pLinkedList.printList();
-      pLinkedList.getLinkedListSize();
-      pLinkedList.deleteFirst();
-      pLinkedList.printList();
-      pLinkedList.deleteLast();
-      pLinkedList.deleteLast();
-      pLinkedList.printList();
-      pLinkedList.deleteFirst();
-      pLinkedList.printList();
-      pLinkedList.addFirst("This");
-      pLinkedList.printList();
-      pLinkedList.getLinkedListSize();
+//      pLinkedList.deleteLast();
+//      pLinkedList.printList();
+//      pLinkedList.getLinkedListSize();
+//      pLinkedList.deleteFirst();
+//      pLinkedList.printList();
+//      pLinkedList.deleteLast();
+//      pLinkedList.deleteLast();
+//      pLinkedList.printList();
+//      pLinkedList.deleteFirst();
+//      pLinkedList.printList();
+//      pLinkedList.addFirst("This");
+//      pLinkedList.printList();
+//      pLinkedList.getLinkedListSize();
   }
 
 
-  /*
-    Given an integer array nums, return true
-    if any value appears at least twice in the array,
-    and return false if every element is distinct.
-    ------------------------------
-    * Input: nums = [1,2,3,1]
-    * Output: true
-    --------------------------
-    * Input: nums = [1,2,3,4]
-    * Output: false
-    ----------------------------
-    * Input: nums = [1,1,1,3,3,4,3,2,4,2]
-    * Output: true
-  */
-  public static boolean containsDuplicate(int[] nums) {
-    HashMap<Integer, Integer> numberMap = new HashMap<Integer, Integer>();
-    for (int i = 0; i < nums.length; i++) {
-      if (numberMap.containsValue(nums[i])) {
-        return true;
-      }
-      numberMap.put(nums[i], nums[i]);
-    }
-    return false;
-  }
+
 
 
   /*

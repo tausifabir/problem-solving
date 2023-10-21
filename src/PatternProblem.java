@@ -32,6 +32,7 @@ public class PatternProblem {
     // First Approach
     for(int i=0; i<4;i++){
       for(int j=0; j<numberOfStars;j++){
+        // this if block only print * for row  2 & 3
         if(i == 1 || i == 2){
           if( j == 1 || j==2 || j ==3){
             System.out.print(" ");
