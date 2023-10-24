@@ -10,6 +10,7 @@ public class Main {
 
     ContainsDuplicateLeetCode codeProblems = new ContainsDuplicateLeetCode();
     RomanToIntegerLeetCode romanToIntegerLeetCode = new RomanToIntegerLeetCode();
+    MergeAlternately mergeAlternately = new MergeAlternately();
 
     String[] strs = new String[]{"Flight", "Flow", "Flower"};
     String strs2 = "]";
@@ -35,8 +36,18 @@ public class Main {
     String s1 = "III";
     String s2 = "LVIII";
     String s3 = "MCMXCIV";
-    // LeetCode 217: Contains Duplicate
-    System.out.println("Leet Code 13: Roman to Integer:  "+romanToIntegerLeetCode.romanToInt(s3));
+    // LeetCode 13: Roman to Integer set Problem TestCase
+    //System.out.println("Leet Code 13: Roman to Integer:  "+romanToIntegerLeetCode.romanToInt(s3));
+
+    // Leet Code 1768. Merge Strings Alternately
+    String mergeString1 = "abc";
+    String mergeString2 = "pqr";
+    String mergeString3 = "ab";
+    String mergeString4 = "pqrs";
+    String mergeString5 = "abcd";
+    String mergeString6 = "pq";
+    // LeetCode 1768: Merge Strings Alternately
+    System.out.println("Leet Code 1768: Merge Strings Alternately:  " + mergeAlternately.mergeAlternately(mergeString3,mergeString4));
 
     //String str = longestCommonPrefix(strs);
 

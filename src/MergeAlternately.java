@@ -43,6 +43,29 @@ public class MergeAlternately {
 
   public String mergeAlternately(String word1, String word2) {
 
-    return null;
+    StringBuilder merge = new StringBuilder();
+    if(word1.length() == word2.length()){
+      for (int i=0; i<word1.length(); i++){
+        merge.append(word1.charAt(i));
+        merge.append(word2.charAt(i));
+      }
+    }else if(word1.length() < word2.length()){
+      for (int i=0; i<word1.length(); i++){
+        merge.append(word1.charAt(i));
+        merge.append(word2.charAt(i));
+      }
+      word2 = word2.substring(word1.length(),word2.length());
+      merge.append(word2);
+    }else{
+      for (int i=0; i<word2.length(); i++){
+        merge.append(word1.charAt(i));
+        merge.append(word2.charAt(i));
+      }
+      word1.substring(0,word2.length()-1);
+      word1 = word1.substring(word2.length(),word1.length());
+      merge.append(word1);
+    }
+
+    return merge.toString();
   }
 }
