@@ -13,6 +13,7 @@ public class Main {
     MergeAlternately mergeAlternately = new MergeAlternately();
     LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
     ValidParentheses validParentheses = new ValidParentheses();
+    GreatestCommonDivisorOfStrings divisorOfStrings = new GreatestCommonDivisorOfStrings();
 
     System.out.println();
 
@@ -51,6 +52,7 @@ public class Main {
     int[] nums3 = new int[]{1,1,1,3,3,4,3,2,4,2};
     int[] nums4 = new int[]{1,2,3,4};
     // LeetCode 217: Contains Duplicate
+    //System.out.println();
     //System.out.println("Leet Code 217: Contains Duplicate:  "+codeProblems.containsDuplicate(nums3));
     //System.out.println("Leet Code 217: Contains Duplicate:  "+codeProblems.containsDuplicateBeginnerApproach(nums4));
     //System.out.println("Leet Code 217: Contains Duplicate:  "+codeProblems.containsDuplicateSetApproach(nums3));
@@ -66,6 +68,7 @@ public class Main {
     String s2 = "LVIII";
     String s3 = "MCMXCIV";
     // LeetCode 13: Roman to Integer set Problem TestCase
+    //System.out.println();
     //System.out.println("Leet Code 13: Roman to Integer:  "+romanToIntegerLeetCode.romanToInt(s3));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
@@ -74,7 +77,7 @@ public class Main {
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
-    /* Leet Code 1768. Merge Strings Alternately */
+    /* Leet Code 1768. Merge Strings Alternately set Problem TestCase */
     String mergeString1 = "abc";
     String mergeString2 = "pqr";
     String mergeString3 = "ab";
@@ -82,8 +85,32 @@ public class Main {
     String mergeString5 = "abcd";
     String mergeString6 = "pq";
     // LeetCode 1768: Merge Strings Alternately
+    System.out.println();
     System.out.println("Leet Code 1768: Merge Strings Alternately:  "
             + mergeAlternately.mergeAlternately(mergeString3,mergeString4));
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+    /* Leet Code 1071: Greatest Common Divisor of Strings set Problem TestCase */
+    String gcdOfStrings1 = "ABCABC";
+    String gcdOfStrings2 = "ABC";
+    String gcdOfStrings3 = "ABABAB";
+    String gcdOfStrings4 = "ABAB";
+    String gcdOfStrings5 = "LEET";
+    String gcdOfStrings6 = "CODE";
+    String gcdOfStrings7 = "ABCABC";
+    String gcdOfStrings8 = "ABCABC";
+    // LeetCode 1071:Greatest Common Divisor of Strings
+    System.out.println();
+    System.out.println("Leet Code 1071: Greatest Common Divisor of Strings:  "
+            + divisorOfStrings.gcdOfStrings(gcdOfStrings3, gcdOfStrings4));
+
+    System.out.println("Leet Code 1071: Greatest Common Divisor of Strings:  "
+            + divisorOfStrings.gcdOfStringsV2(gcdOfStrings1, gcdOfStrings2));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
@@ -118,6 +145,7 @@ public class Main {
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
+    System.out.println();
 
   }
 

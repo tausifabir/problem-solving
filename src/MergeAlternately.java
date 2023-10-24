@@ -54,7 +54,7 @@ public class MergeAlternately {
         merge.append(word1.charAt(i));
         merge.append(word2.charAt(i));
       }
-      word2 = word2.substring(word1.length(),word2.length());
+      word2 = word2.substring(word1.length(), word2.length());
       merge.append(word2);
     }else{
       for (int i=0; i<word2.length(); i++){
@@ -62,7 +62,7 @@ public class MergeAlternately {
         merge.append(word2.charAt(i));
       }
       word1.substring(0,word2.length()-1);
-      word1 = word1.substring(word2.length(),word1.length());
+      word1 = word1.substring(word2.length(), word1.length());
       merge.append(word1);
     }
 
