@@ -14,6 +14,7 @@ public class Main {
     LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
     ValidParentheses validParentheses = new ValidParentheses();
     GreatestCommonDivisorOfStrings divisorOfStrings = new GreatestCommonDivisorOfStrings();
+    KidsWithTheGreatestNumberOfCandies kids = new KidsWithTheGreatestNumberOfCandies();
 
     System.out.println();
 
@@ -86,8 +87,8 @@ public class Main {
     String mergeString6 = "pq";
     // LeetCode 1768: Merge Strings Alternately
     System.out.println();
-    System.out.println("Leet Code 1768: Merge Strings Alternately:  "
-            + mergeAlternately.mergeAlternately(mergeString3,mergeString4));
+    //System.out.println("Leet Code 1768: Merge Strings Alternately:  "
+    //       + mergeAlternately.mergeAlternately(mergeString3,mergeString4));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
@@ -106,11 +107,11 @@ public class Main {
     String gcdOfStrings8 = "ABCABC";
     // LeetCode 1071:Greatest Common Divisor of Strings
     System.out.println();
-    System.out.println("Leet Code 1071: Greatest Common Divisor of Strings:  "
-            + divisorOfStrings.gcdOfStrings(gcdOfStrings3, gcdOfStrings4));
+    //System.out.println("Leet Code 1071: Greatest Common Divisor of Strings:  "
+    //        + divisorOfStrings.gcdOfStrings(gcdOfStrings3, gcdOfStrings4));
 
-    System.out.println("Leet Code 1071: Greatest Common Divisor of Strings:  "
-            + divisorOfStrings.gcdOfStringsV2(gcdOfStrings1, gcdOfStrings2));
+    //System.out.println("Leet Code 1071: Greatest Common Divisor of Strings:  "
+    //        + divisorOfStrings.gcdOfStringsV2(gcdOfStrings1, gcdOfStrings2));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
@@ -125,6 +126,28 @@ public class Main {
     //System.out.println(mergedTwoUnsortedList(numberList1,numberList2));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
+
+
+
+
+     /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+    /* Leet Code 1431. Kids With the Greatest Number of Candies of Strings set Problem TestCase */
+    int [] candies1 = {2,3,5,1,3};
+    int extraCandies1 = 3;
+    int [] candies2 = {12,1,12};
+    int extraCandies2 = 10;
+    int [] candies3 = {4,2,1,1,2};
+    int extraCandies3 = 1;
+
+    // LeetCode 1431. Kids With the Greatest Number of Candies
+    System.out.println();
+    System.out.println("LeetCode 1431. Kids With the Greatest Number of Candies:  "
+            + kids.kidsWithCandies(candies1, extraCandies1));
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
 
 
     /*----------------------------------------------------------------
