@@ -49,7 +49,7 @@ public class KidsWithTheGreatestNumberOfCandies {
      */
 
     /*
-     * Runtime : 1ms, Memory : 41.9MB
+     * Runtime : 5ms, Memory : 41.9MB
      */
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
 
@@ -71,7 +71,7 @@ public class KidsWithTheGreatestNumberOfCandies {
     }
 
     /*
-    * Runtime : 5ms, Memory : 41.7MB
+    * Runtime : 1ms, Memory : 41.7MB
     */
     public List<Boolean> kidsWithCandiesV2(int[] candies, int extraCandies) {
 
