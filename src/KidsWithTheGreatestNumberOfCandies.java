@@ -66,4 +66,29 @@ public class KidsWithTheGreatestNumberOfCandies {
         return booleanList;
 
     }
+
+    public List<Boolean> kidsWithCandiesV2(int[] candies, int extraCandies) {
+
+        int max = candies[0];
+
+        for (int i=0; i< candies.length; i++){
+            if( i+1 < candies.length && max < candies[i+1]){
+                max = candies[i+1];
+            }
+        }
+
+        List<Boolean> booleanList = new ArrayList<>();
+
+        for (int candy : candies) {
+
+            if (candy + extraCandies >= max) {
+                booleanList.add(true);
+            } else {
+                booleanList.add(false);
+            }
+        }
+
+        return booleanList;
+
+    }
 }

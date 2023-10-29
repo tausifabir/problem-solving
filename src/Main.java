@@ -143,8 +143,11 @@ public class Main {
 
     // LeetCode 1431. Kids With the Greatest Number of Candies
     System.out.println();
+    //System.out.println("LeetCode 1431. Kids With the Greatest Number of Candies:  "
+    //        + kids.kidsWithCandies(candies1, extraCandies1));
+
     System.out.println("LeetCode 1431. Kids With the Greatest Number of Candies:  "
-            + kids.kidsWithCandies(candies1, extraCandies1));
+            + kids.kidsWithCandiesV2(candies3, extraCandies3));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
