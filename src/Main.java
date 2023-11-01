@@ -1,5 +1,6 @@
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -15,6 +16,7 @@ public class Main {
     ValidParentheses validParentheses = new ValidParentheses();
     GreatestCommonDivisorOfStrings divisorOfStrings = new GreatestCommonDivisorOfStrings();
     KidsWithTheGreatestNumberOfCandies kids = new KidsWithTheGreatestNumberOfCandies();
+    CanPlaceFlowers canPlaceFlowers = new CanPlaceFlowers();
 
     System.out.println();
 
@@ -97,7 +99,7 @@ public class Main {
     ------------------------------------------------------------------*/
 
     /* Leet Code 1071: Greatest Common Divisor of Strings set Problem TestCase */
-    String gcdOfStrings1 = "ABCABC";
+    String gcdOfStrings1 = "ABCABCABC";
     String gcdOfStrings2 = "ABC";
     String gcdOfStrings3 = "ABABAB";
     String gcdOfStrings4 = "ABAB";
@@ -146,8 +148,8 @@ public class Main {
     //System.out.println("LeetCode 1431. Kids With the Greatest Number of Candies:  "
     //        + kids.kidsWithCandies(candies1, extraCandies1));
 
-    System.out.println("LeetCode 1431. Kids With the Greatest Number of Candies:  "
-            + kids.kidsWithCandiesV2(candies3, extraCandies3));
+    //System.out.println("LeetCode 1431. Kids With the Greatest Number of Candies:  "
+    //        + kids.kidsWithCandiesV2(candies3, extraCandies3));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
@@ -168,6 +170,34 @@ public class Main {
     //patternProblem.floydTriangleProblem(5);
     //patternProblem.zeroOneTriangleProblem(5);
     //patternProblem.solidRhombusProblem(5);
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+    /* Leet Code 605. Can Place Flowers set Problem TestCase */
+    int [] flowerSet1 = {0,0,1,0,0};
+    int newFlowers1 = 2;
+    int [] flowerSet2 = {1,0,0,0,1};
+    int newFlowers2 = 1;
+    int [] flowerSet3= {1,0,0,0,1};
+    int newFlowers3 = 2;
+    int [] flowerSet4 = {0,0,1,0,0};
+    int newFlowers4 = 3;
+    int [] flowerSet5 = {1};
+    int newFlowers5 = 1;
+
+    // LeetCode 605. Kids With the Greatest Number of Candies
+    System.out.println();
+    //System.out.println("LeetCode 605. Can Place Flowers:  "
+    //        + kids.kidsWithCandies(candies1, extraCandies1));
+
+    System.out.println("LeetCode 605. Can Place Flowers set Problem TestCase:  "+
+        Arrays.toString(flowerSet5) +", "+ newFlowers5 + ", result "
+        + canPlaceFlowers.canPlaceFlowers(flowerSet5, newFlowers5));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
