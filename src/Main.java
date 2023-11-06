@@ -1,7 +1,16 @@
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import linkedlist.PracticeLinkedList;
+import solutions.CanPlaceFlowers;
+import solutions.ContainsDuplicateLeetCode;
+import solutions.GreatestCommonDivisorOfStrings;
+import solutions.KidsWithTheGreatestNumberOfCandies;
+import solutions.LongestCommonPrefix;
+import solutions.MergeAlternately;
+import solutions.ReverseVowelsOfAString;
+import solutions.RomanToIntegerLeetCode;
+import solutions.ValidParentheses;
 
 public class Main {
 
@@ -17,6 +26,7 @@ public class Main {
     GreatestCommonDivisorOfStrings divisorOfStrings = new GreatestCommonDivisorOfStrings();
     KidsWithTheGreatestNumberOfCandies kids = new KidsWithTheGreatestNumberOfCandies();
     CanPlaceFlowers canPlaceFlowers = new CanPlaceFlowers();
+    ReverseVowelsOfAString reverseVowelsOfAString = new ReverseVowelsOfAString();
 
     System.out.println();
 
@@ -159,7 +169,7 @@ public class Main {
     ------------------------------------------------------------------*/
 
     /* Pattern Problems Practice */
-    //PatternProblem patternProblem = new PatternProblem();
+    //solutions.PatternProblem patternProblem = new solutions.PatternProblem();
     //patternProblem.solidRectanglePatternProblem(4);
     //patternProblem.hollowPatternProblem(5);
     //patternProblem.halfPyramidPatternProblem(5);
@@ -195,9 +205,28 @@ public class Main {
     //System.out.println("LeetCode 605. Can Place Flowers:  "
     //        + kids.kidsWithCandies(candies1, extraCandies1));
 
-    System.out.println("LeetCode 605. Can Place Flowers set Problem TestCase:  "+
-        Arrays.toString(flowerSet5) +", "+ newFlowers5 + ", result "
-        + canPlaceFlowers.canPlaceFlowers(flowerSet5, newFlowers5));
+    //System.out.println("LeetCode 605. Can Place Flowers set Problem TestCase:  "+
+    //    Arrays.toString(flowerSet5) +", "+ newFlowers5 + ", result "
+    //    + canPlaceFlowers.canPlaceFlowers(flowerSet5, newFlowers5));
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+    /* Leet Code 345.Reverse Vowels of a String set Problem TestCase */
+
+    String reverseVowels1 = "hello";
+    String reverseVowels2 = "leetcode";
+    String reverseVowels3 = "aA";
+
+
+    // Leet Code 345.Reverse Vowels of a String
+    System.out.println();
+    System.out.println("Leet Code 345.Reverse Vowels of a String set Problem TestCase:  " +reverseVowels3+ " -> Result: "
+        + reverseVowelsOfAString.reverseVowels(reverseVowels3));
+
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
