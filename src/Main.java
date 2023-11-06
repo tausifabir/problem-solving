@@ -9,6 +9,7 @@ import solutions.KidsWithTheGreatestNumberOfCandies;
 import solutions.LongestCommonPrefix;
 import solutions.MergeAlternately;
 import solutions.ReverseVowelsOfAString;
+import solutions.ReverseWordsInAString;
 import solutions.RomanToIntegerLeetCode;
 import solutions.ValidParentheses;
 
@@ -27,6 +28,7 @@ public class Main {
     KidsWithTheGreatestNumberOfCandies kids = new KidsWithTheGreatestNumberOfCandies();
     CanPlaceFlowers canPlaceFlowers = new CanPlaceFlowers();
     ReverseVowelsOfAString reverseVowelsOfAString = new ReverseVowelsOfAString();
+    ReverseWordsInAString reverseWordsInAString = new ReverseWordsInAString();
 
     System.out.println();
 
@@ -221,11 +223,28 @@ public class Main {
     String reverseVowels2 = "leetcode";
     String reverseVowels3 = "aA";
 
-
     // Leet Code 345.Reverse Vowels of a String
     System.out.println();
     System.out.println("Leet Code 345.Reverse Vowels of a String set Problem TestCase:  " +reverseVowels3+ " -> Result: "
         + reverseVowelsOfAString.reverseVowels(reverseVowels3));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+        /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+    /* Leet Code 151. Reverse Words in a String set Problem TestCase */
+
+    String reverseWords1 = "the sky is blue";
+    String reverseWords2 = "  hello world  ";
+    String reverseWords3 = "a good   example";
+
+    // Leet Code 151. Reverse Words in a String
+    System.out.println();
+    System.out.println("Leet Code 151. Reverse Words in a String set Problem TestCase:  " +reverseWords1+ " -> Result: "
+        + reverseWordsInAString.reverseWords(reverseWords1));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
