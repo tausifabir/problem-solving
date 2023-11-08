@@ -1,5 +1,8 @@
 package solutions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ReverseWordsInAString {
 
   /*
@@ -47,14 +50,32 @@ public class ReverseWordsInAString {
    */
 
   public String reverseWords(String s) {
+//    char [] replaceVowels = s.toCharArray();
+    List<Character> reverseVowels = new ArrayList<>();
+    String replaceString = s;
+    String returnString = null;
+    int length = s.length()-1;
+    if(!s.isEmpty()){
+      for (int i = length; i >= 0; i--){
 
-    return null;
+        if (checkCharacterIsWhiteSpace(s.charAt(i))) {
+             returnString = replaceString.substring(i);
+        };
+
+       /* if(i == 0 && !checkCharacterIsWhiteSpace(s.charAt(i))){
+          returnString = replaceString.substring(0,0);
+        }*/
+      }
+    }
+
+
+    return returnString;
   }
 
-  public boolean reverseWord(Character c){
+  public boolean checkCharacterIsWhiteSpace(Character c){
 
-    return c.equals('a') || c.equals('e') || c.equals('i') || c.equals('o') || c.equals('u')
-        ||  c.equals('A')  || c.equals('E') || c.equals('I') || c.equals('O') || c.equals('U');
+    return c.equals(' ');
+
 
   }
 
