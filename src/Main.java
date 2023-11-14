@@ -135,8 +135,16 @@ public class Main {
     ------------------------------------------------------------------*/
 
     /* Merged Two UnsortedList with [list/arraylist] */
-    ArrayList<Integer> numberList1 = new ArrayList<Integer>(){{add(55);add(92);add(401);}};
-    ArrayList<Integer> numberList2 = new ArrayList<Integer>(){{add(113);add(31);add(27);}};
+    ArrayList<Integer> numberList1 = new ArrayList<>() {{
+        add(55);
+        add(92);
+        add(401);
+    }};
+    ArrayList<Integer> numberList2 = new ArrayList<>() {{
+        add(113);
+        add(31);
+        add(27);
+    }};
     //System.out.println(mergedTwoUnsortedList(numberList1,numberList2));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
