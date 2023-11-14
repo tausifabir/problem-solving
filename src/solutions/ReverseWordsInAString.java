@@ -49,34 +49,74 @@ public class ReverseWordsInAString {
 
    */
 
+  /*
+   * Runtime : 26ms, Memory : 44.43MB
+   */
   public String reverseWords(String s) {
-//    char [] replaceVowels = s.toCharArray();
-    List<Character> reverseVowels = new ArrayList<>();
-    String replaceString = s;
-    String returnString = null;
+
+    s = s.trim();
+
+    String replaceString = "";
+
+    String storeTempString = "";
+
     int length = s.length()-1;
+
+    int countSpace = 0;
+
     if(!s.isEmpty()){
+
       for (int i = length; i >= 0; i--){
 
-        if (checkCharacterIsWhiteSpace(s.charAt(i))) {
-             returnString = replaceString.substring(i);
-        };
+        if( i == 0){
 
-       /* if(i == 0 && !checkCharacterIsWhiteSpace(s.charAt(i))){
-          returnString = replaceString.substring(0,0);
-        }*/
+          storeTempString = storeTempString + String.valueOf(s.charAt(i)) + " ";
+          replaceString = reserveWorld(storeTempString, replaceString);
+          storeTempString = "";
+
+        } else if (!checkCharacterIsWhiteSpace(s.charAt(i))) {
+
+          storeTempString = storeTempString + String.valueOf(s.charAt(i));
+
+        } else if(checkCharacterIsWhiteSpace(s.charAt(i))) {
+
+          if(!replaceString.isEmpty() && checkCharacterIsWhiteSpace(s.charAt(i+1))) {
+            continue;
+          } else {
+            storeTempString = storeTempString.trim() + String.valueOf(s.charAt(i));
+            replaceString = reserveWorld(storeTempString, replaceString);
+            storeTempString = "";
+            countSpace++;
+          }
+
+        }
+
       }
     }
 
 
-    return returnString;
+    return replaceString.trim();
   }
 
   public boolean checkCharacterIsWhiteSpace(Character c){
-
     return c.equals(' ');
+  }
+
+  public String reserveWorld(String returnString,String passString){
 
 
+
+    returnString.trim();
+
+    int length = returnString.length()-1;
+
+    for (int i = length; i >= 0; i--){
+      passString = passString + String.valueOf(returnString.charAt(i));
+
+    }
+
+
+    return passString;
   }
 
 }

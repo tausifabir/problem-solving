@@ -237,14 +237,14 @@ public class Main {
 
     /* Leet Code 151. Reverse Words in a String set Problem TestCase */
 
-    String reverseWords1 = "the sky is blue";
+    String reverseWords1 = " the sky is blue ";
     String reverseWords2 = "  hello world  ";
     String reverseWords3 = "a good   example";
 
     // Leet Code 151. Reverse Words in a String
     System.out.println();
-    System.out.println("Leet Code 151. Reverse Words in a String set Problem TestCase:  " +reverseWords1+ " -> Result: "
-        + reverseWordsInAString.reverseWords(reverseWords1));
+    System.out.println("Leet Code 151. Reverse Words in a String set Problem TestCase:  " +reverseWords3+ " -> Result: "
+        + reverseWordsInAString.reverseWords(reverseWords3));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
