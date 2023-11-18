@@ -171,7 +171,7 @@ public class Main {
     System.out.println("LeetCode 21. Merge Two Sorted Lists set Problem TestCase =>  \n"
             +"given 1st list: " + numberList1
             + "\ngiven 2nd list: " + numberList2
-            + "\n-> result:      "
+            + "\n-> Result:      "
             + mergedTwoUnsortedList.mergedTwoUnsortedList(numberList1, numberList2));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
@@ -194,13 +194,13 @@ public class Main {
     System.out.println();
     System.out.println("LeetCode 1431. Kids With the Greatest Number of Candies  set Problem TestCase =>   " +
             "\ngiven candies array: " + Arrays.toString(candies1) + " givenExtra candies: "+extraCandies1
-            +"\n-> result: "
+            +"\n-> Result: "
             + kids.kidsWithCandies(candies1, extraCandies1));
 
     System.out.println();
     System.out.println("LeetCode 1431. Kids With the Greatest Number of Candies  set Problem TestCase =>   " +
             "\ngiven candies array: " + Arrays.toString(candies3) + " givenExtra candies: "+extraCandies3
-            +"\n-> result: "
+            +"\n-> Result: "
             + kids.kidsWithCandiesV2(candies3, extraCandies3));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
@@ -226,8 +226,8 @@ public class Main {
     System.out.println();
 
     System.out.println("LeetCode 605. Can Place Flowers set Problem TestCase =>  " +
-            "\ngiven array: " + Arrays.toString(flowerSet5) +", want to plants: "+ newFlowers5 +
-            "\n  -> Result: " + canPlaceFlowers.canPlaceFlowers(flowerSet5, newFlowers5));
+            "\ngiven array: " + Arrays.toString(flowerSet4) +", want to plants: "+ newFlowers4 +
+            "\n  -> Result: " + canPlaceFlowers.canPlaceFlowers(flowerSet4, newFlowers4));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
