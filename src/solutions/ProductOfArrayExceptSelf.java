@@ -42,14 +42,26 @@ public class ProductOfArrayExceptSelf {
 
     public int[] productExceptSelf(int[] nums) {
 
-        int[] returnNums;
+
+        int totalMultipler = 1 ;
 
         for (int i=0; i<nums.length; i++) {
 
+            if (nums [i] != 0) {
+                totalMultipler = totalMultipler * nums [i];
+            }
 
 
         }
 
-        return null;
+        for (int i=0; i<nums.length; i++) {
+
+            if (nums [i] != 0) {
+                nums [i] = totalMultipler / nums [i];
+            }
+
+        }
+
+        return nums;
     }
 }
