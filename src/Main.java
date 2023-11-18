@@ -11,6 +11,7 @@ public class Main {
   public static void main(String[] args) throws ParseException {
 
     ContainsDuplicateLeetCode codeProblems = new ContainsDuplicateLeetCode();
+    MergedTwoUnsortedList mergedTwoUnsortedList = new MergedTwoUnsortedList();
     RomanToIntegerLeetCode romanToIntegerLeetCode = new RomanToIntegerLeetCode();
     MergeAlternately mergeAlternately = new MergeAlternately();
     LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
@@ -21,10 +22,39 @@ public class Main {
     ReverseVowelsOfAString reverseVowelsOfAString = new ReverseVowelsOfAString();
     ReverseWordsInAString reverseWordsInAString = new ReverseWordsInAString();
     ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
+    SortVowelsInAString sortVowelsInAString = new SortVowelsInAString();
 
     System.out.println();
 
 
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+    /* Pattern Problems Practice */
+    //solutions.PatternProblem patternProblem = new solutions.PatternProblem();
+    //patternProblem.solidRectanglePatternProblem(4);
+    //patternProblem.hollowPatternProblem(5);
+    //patternProblem.halfPyramidPatternProblem(5);
+    //patternProblem.halfPyramidReversePatternProblem(4);
+    //patternProblem.halfPyramidInvertedPatternProblem(4);
+    //patternProblem.halfPyramidPatternWithNumbersProblem(5);
+    //patternProblem.halfPyramidInvertedPatternWithNumbersProblem(5);
+    //patternProblem.floydTriangleProblem(5);
+    //patternProblem.zeroOneTriangleProblem(5);
+    //patternProblem.solidRhombusProblem(5);
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+                       /* Leet Code Problem set */
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
@@ -126,18 +156,23 @@ public class Main {
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
-    /* Merged Two UnsortedList with [list/arraylist] */
-    ArrayList<Integer> numberList1 = new ArrayList<>() {{
-        add(55);
-        add(92);
-        add(401);
+    /* Leet Code 21. Merge Two Sorted Lists */
+    ArrayList<Integer> numberList1 = new ArrayList<Integer>() {{
+      add(55);
+      add(92);
+      add(401);
     }};
-    ArrayList<Integer> numberList2 = new ArrayList<>() {{
-        add(113);
-        add(31);
-        add(27);
+    ArrayList<Integer> numberList2 = new ArrayList<Integer>() {{
+      add(113);
+      add(31);
+      add(27);
     }};
-    //System.out.println(mergedTwoUnsortedList(numberList1,numberList2));
+
+    System.out.println("LeetCode 21. Merge Two Sorted Lists set Problem TestCase =>  \n"
+            +"given 1st list: " + numberList1
+            + "\ngiven 2nd list: " + numberList2
+            + "\n-> result:      "
+            + mergedTwoUnsortedList.mergedTwoUnsortedList(numberList1, numberList2));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
@@ -157,31 +192,16 @@ public class Main {
 
     // LeetCode 1431. Kids With the Greatest Number of Candies
     System.out.println();
-    //System.out.println("LeetCode 1431. Kids With the Greatest Number of Candies:  "
-    //        + kids.kidsWithCandies(candies1, extraCandies1));
+    System.out.println("LeetCode 1431. Kids With the Greatest Number of Candies  set Problem TestCase =>   " +
+            "\ngiven candies array: " + Arrays.toString(candies1) + " givenExtra candies: "+extraCandies1
+            +"\n-> result: "
+            + kids.kidsWithCandies(candies1, extraCandies1));
 
-    //System.out.println("LeetCode 1431. Kids With the Greatest Number of Candies:  "
-    //        + kids.kidsWithCandiesV2(candies3, extraCandies3));
-    /*----------------------------------------------------------------
-    ------------------------------------------------------------------*/
-
-
-
-    /*----------------------------------------------------------------
-    ------------------------------------------------------------------*/
-
-    /* Pattern Problems Practice */
-    //solutions.PatternProblem patternProblem = new solutions.PatternProblem();
-    //patternProblem.solidRectanglePatternProblem(4);
-    //patternProblem.hollowPatternProblem(5);
-    //patternProblem.halfPyramidPatternProblem(5);
-    //patternProblem.halfPyramidReversePatternProblem(4);
-    //patternProblem.halfPyramidInvertedPatternProblem(4);
-    //patternProblem.halfPyramidPatternWithNumbersProblem(5);
-    //patternProblem.halfPyramidInvertedPatternWithNumbersProblem(5);
-    //patternProblem.floydTriangleProblem(5);
-    //patternProblem.zeroOneTriangleProblem(5);
-    //patternProblem.solidRhombusProblem(5);
+    System.out.println();
+    System.out.println("LeetCode 1431. Kids With the Greatest Number of Candies  set Problem TestCase =>   " +
+            "\ngiven candies array: " + Arrays.toString(candies3) + " givenExtra candies: "+extraCandies3
+            +"\n-> result: "
+            + kids.kidsWithCandiesV2(candies3, extraCandies3));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
@@ -202,14 +222,12 @@ public class Main {
     int [] flowerSet5 = {1};
     int newFlowers5 = 1;
 
-    // LeetCode 605. Kids With the Greatest Number of Candies
+    // LeetCode 605. Can Place Flowers
     System.out.println();
-    //System.out.println("LeetCode 605. Can Place Flowers:  "
-    //        + kids.kidsWithCandies(candies1, extraCandies1));
 
-    //System.out.println("LeetCode 605. Can Place Flowers set Problem TestCase:  "+
-    //    Arrays.toString(flowerSet5) +", "+ newFlowers5 + ", result "
-    //    + canPlaceFlowers.canPlaceFlowers(flowerSet5, newFlowers5));
+    System.out.println("LeetCode 605. Can Place Flowers set Problem TestCase =>  " +
+            "\ngiven array: " + Arrays.toString(flowerSet5) +", want to plants: "+ newFlowers5 +
+            "\n  -> Result: " + canPlaceFlowers.canPlaceFlowers(flowerSet5, newFlowers5));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
@@ -225,14 +243,14 @@ public class Main {
 
     // Leet Code 345.Reverse Vowels of a String
     System.out.println();
-    System.out.println("Leet Code 345.Reverse Vowels of a String set Problem TestCase:  " +reverseVowels3+ " -> Result: "
-        + reverseVowelsOfAString.reverseVowels(reverseVowels3));
+    System.out.println("Leet Code 345.Reverse Vowels of a String set Problem TestCase =>  given array: "+ reverseVowels3
+            +" -> Result: "+ reverseVowelsOfAString.reverseVowels(reverseVowels3));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
 
-        /*----------------------------------------------------------------
+    /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
     /* Leet Code 151. Reverse Words in a String set Problem TestCase */
@@ -243,13 +261,16 @@ public class Main {
 
     // Leet Code 151. Reverse Words in a String
     System.out.println();
-    System.out.println("Leet Code 151. Reverse Words in a String set Problem TestCase:  " +reverseWords3+ " -> Result: "
-        + reverseWordsInAString.reverseWords(reverseWords3));
+    System.out.println("Leet Code 151. Reverse Words in a String set Problem TestCase =>   given array: " + reverseWords3
+            + " -> Result: "
+            + reverseWordsInAString.reverseWords(reverseWords3));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
 
+     /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
     /* Leet Code 238. Product of Array Except Self set Problem TestCase */
 
     int[] productArray1 = {1,2,3,4};
@@ -258,12 +279,31 @@ public class Main {
 
     // Leet Code 238. Product of Array Except Self
     System.out.println();
-    System.out.println("Leet Code 238. Product of Array Except Self set Problem TestCase:  "
+    System.out.println("Leet Code 238. Product of Array Except Self set Problem TestCase =>  given array: "
             + Arrays.toString(productArray1) + " -> Result: "
             + Arrays.toString(productOfArrayExceptSelf.productExceptSelf(productArray1)));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 2785. Sort Vowels in a String set Problem TestCase */
+
+    String sortVowels1 = "lEetcOde";
+    String sortVowels2 = "lYmpH";
+
+
+    // Leet Code 2785. Sort Vowels in a String
+    System.out.println();
+    System.out.println("Leet Code 2785. Sort Vowels in a String set Problem TestCase => given array: " + sortVowels1
+            + " -> Result: "
+            + sortVowelsInAString.sortVowels(sortVowels1));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
 
     System.out.println();
 
