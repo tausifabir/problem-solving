@@ -2,16 +2,7 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import linkedlist.PracticeLinkedList;
-import solutions.CanPlaceFlowers;
-import solutions.ContainsDuplicateLeetCode;
-import solutions.GreatestCommonDivisorOfStrings;
-import solutions.KidsWithTheGreatestNumberOfCandies;
-import solutions.LongestCommonPrefix;
-import solutions.MergeAlternately;
-import solutions.ReverseVowelsOfAString;
-import solutions.ReverseWordsInAString;
-import solutions.RomanToIntegerLeetCode;
-import solutions.ValidParentheses;
+import solutions.*;
 
 public class Main {
 
@@ -29,6 +20,7 @@ public class Main {
     CanPlaceFlowers canPlaceFlowers = new CanPlaceFlowers();
     ReverseVowelsOfAString reverseVowelsOfAString = new ReverseVowelsOfAString();
     ReverseWordsInAString reverseWordsInAString = new ReverseWordsInAString();
+    ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
 
     System.out.println();
 
@@ -253,6 +245,22 @@ public class Main {
     System.out.println();
     System.out.println("Leet Code 151. Reverse Words in a String set Problem TestCase:  " +reverseWords3+ " -> Result: "
         + reverseWordsInAString.reverseWords(reverseWords3));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+    /* Leet Code 238. Product of Array Except Self set Problem TestCase */
+
+    int[] productArray1 = {1,2,3,4};
+    int[] productArray2 = {-1,1,0,-3,3};
+
+
+    // Leet Code 238. Product of Array Except Self
+    System.out.println();
+    System.out.println("Leet Code 238. Product of Array Except Self set Problem TestCase:  "
+            + Arrays.toString(productArray1) + " -> Result: "
+            + Arrays.toString(productOfArrayExceptSelf.productExceptSelf(productArray1)));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
