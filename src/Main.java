@@ -244,7 +244,8 @@ public class Main {
     System.out.println();
 
     System.out.println("LeetCode 605. Can Place Flowers set Problem TestCase =>  "
-            + "\ngiven array: " + Arrays.toString(flowerSet4) + ", want to plants: " + newFlowers4
+            + "\ngiven array: " + Arrays.toString(flowerSet4) + ", want to plants: "
+            + newFlowers4
             + "\n  -> Result: " + canPlaceFlowers.canPlaceFlowers(flowerSet4, newFlowers4));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
@@ -299,7 +300,8 @@ public class Main {
 
     // Leet Code 238. Product of Array Except Self
     System.out.println();
-    System.out.println("Leet Code 238. Product of Array Except Self set Problem TestCase =>  given array: "
+    System.out
+        .println("Leet Code 238. Product of Array Except Self set Problem TestCase =>  given array: "
             + Arrays.toString(productArray1) + " -> Result: "
             + Arrays.toString(productOfArrayExceptSelf.productExceptSelfV2(productArray1)));
 
@@ -317,7 +319,9 @@ public class Main {
 
     // Leet Code 2785. Sort Vowels in a String
     System.out.println();
-    System.out.println("Leet Code 2785. Sort Vowels in a String set Problem TestCase => given array: " + sortVowels1
+    System.out
+        .println("Leet Code 2785. Sort Vowels in a String set Problem TestCase => given array: "
+            + sortVowels1
             + " -> Result: "
             + sortVowelsInString.sortVowels(sortVowels1));
 
