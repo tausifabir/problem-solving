@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class RomanToIntegerLeetCode {
 
+
     /*
     Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
@@ -54,27 +55,29 @@ public class RomanToIntegerLeetCode {
     ------------------------------
     */
 
-    public int romanToInt(String s) {
+    /** RomanTo Int.*/
+    private int romanToInt(String s) {
+
         HashMap<Character, Integer> romanNumber = new HashMap<Character, Integer>();
-        romanNumber.put('I',1);
-        romanNumber.put('V',5);
-        romanNumber.put('X',10);
-        romanNumber.put('L',50);
-        romanNumber.put('C',100);
-        romanNumber.put('D',500);
-        romanNumber.put('M',1000);
-        
+        romanNumber.put('I', 1);
+        romanNumber.put('V', 5);
+        romanNumber.put('X', 10);
+        romanNumber.put('L', 50);
+        romanNumber.put('C', 100);
+        romanNumber.put('D', 500);
+        romanNumber.put('M', 1000);
+
         int sum = 0;
-        
-        for(int i=0; i<s.length(); i++){
-            if(i+1 < s.length() && romanNumber.get(s.charAt(i)) < romanNumber.get(s.charAt(i+1)) ){
+
+        for (int i = 0; i < s.length(); i++) {
+            if (i + 1 < s.length() && romanNumber.get(s.charAt(i)) < romanNumber.get(s.charAt(i + 1))) {
                 sum -= romanNumber.get(s.charAt(i));
-            }else{
+            } else {
                 sum += romanNumber.get(s.charAt(i));
             }
         }
-        
+
         return sum;
-        
+
     }
 }

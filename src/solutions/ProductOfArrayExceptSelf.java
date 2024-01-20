@@ -2,7 +2,7 @@ package solutions;
 
 public class ProductOfArrayExceptSelf {
 
-    /*
+  /*
     Given an integer array nums, return an array answer such that
     answer[i] is equal to the product of all the elements of nums except nums[i].
     The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
@@ -36,32 +36,57 @@ public class ProductOfArrayExceptSelf {
     */
 
 
-    /*
-    * Runtime : 0ms, Memory : 0MB
-    */
+  // Runtime : 2ms, Memory : 55MB.
+  /**
+   * productExceptSelf.
+   */
+  public int[] productExceptSelf(int[] nums) {
 
-    public int[] productExceptSelf(int[] nums) {
+    int[] leftProducts = new int[nums.length];
+    int[] rightProducts = new int[nums.length];
 
+    leftProducts[0] = 1;
 
-        int totalMultipler = 1 ;
-
-        for (int i=0; i<nums.length; i++) {
-
-            if (nums [i] != 0) {
-                totalMultipler = totalMultipler * nums [i];
-            }
-
-
-        }
-
-        for (int i=0; i<nums.length; i++) {
-
-            if (nums [i] != 0) {
-                nums [i] = totalMultipler / nums [i];
-            }
-
-        }
-
-        return nums;
+    for (int i = 1; i < nums.length; i++) {
+      leftProducts[i] = leftProducts[i - 1] * nums[i - 1];
     }
+
+    rightProducts[nums.length - 1] = 1;
+    for (int i = nums.length - 2; i >= 0; i--) {
+      rightProducts[i] = rightProducts[i + 1] * nums[i + 1];
+    }
+
+    int[] ans = new int[nums.length];
+    for (int i = 0; i < nums.length; i++) {
+      ans[i] = leftProducts[i] * rightProducts[i];
+    }
+
+    return ans;
+
+  }
+
+
+  // Runtime : 1ms, Memory : 55MB.
+
+  /**
+   * productExceptSelfV2.
+   */
+  public int[] productExceptSelfV2(int[] nums) {
+    int n = nums.length;
+
+    int a = 1;
+    int b = 1;
+    int[] arr = new int[n];
+    for (int i = 0; i < n; i++) {
+      arr[i] = a;
+      a = a * nums[i];
+    }
+    for (int i = n - 1; i >= 0; i--) {
+      arr[i] = arr[i] * b;
+      b = b * nums[i];
+    }
+    return arr;
+
+  }
+
 }

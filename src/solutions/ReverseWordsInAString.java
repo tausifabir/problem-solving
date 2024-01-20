@@ -3,6 +3,7 @@ package solutions;
 import java.util.ArrayList;
 import java.util.List;
 
+/** ReverseWordsInAString. */
 public class ReverseWordsInAString {
 
   /*
@@ -52,6 +53,8 @@ public class ReverseWordsInAString {
   /*
    * Runtime : 26ms, Memory : 44.43MB
    */
+
+  /** reverseWords.*/
   public String reverseWords(String s) {
 
     s = s.trim();
@@ -64,11 +67,11 @@ public class ReverseWordsInAString {
 
     int countSpace = 0;
 
-    if(!s.isEmpty()){
+    if (!s.isEmpty()) {
 
-      for (int i = length; i >= 0; i--){
+      for (int i = length; i >= 0; i--) {
 
-        if( i == 0){
+        if (i == 0) {
 
           storeTempString = storeTempString + String.valueOf(s.charAt(i)) + " ";
           replaceString = reserveWorld(storeTempString, replaceString);
@@ -78,9 +81,9 @@ public class ReverseWordsInAString {
 
           storeTempString = storeTempString + String.valueOf(s.charAt(i));
 
-        } else if(checkCharacterIsWhiteSpace(s.charAt(i))) {
+        } else if (checkCharacterIsWhiteSpace(s.charAt(i))) {
 
-          if(!replaceString.isEmpty() && checkCharacterIsWhiteSpace(s.charAt(i+1))) {
+          if (!replaceString.isEmpty() && checkCharacterIsWhiteSpace(s.charAt(i+1))) {
             continue;
           } else {
             storeTempString = storeTempString.trim() + String.valueOf(s.charAt(i));
@@ -98,19 +101,18 @@ public class ReverseWordsInAString {
     return replaceString.trim();
   }
 
-  public boolean checkCharacterIsWhiteSpace(Character c){
+  public boolean checkCharacterIsWhiteSpace(Character c) {
     return c.equals(' ');
   }
 
-  public String reserveWorld(String returnString,String passString){
-
-
+  /** reserveWorld. */
+  public String reserveWorld(String returnString, String passString) {
 
     returnString.trim();
 
     int length = returnString.length()-1;
 
-    for (int i = length; i >= 0; i--){
+    for (int i = length; i >= 0; i--) {
       passString = passString + String.valueOf(returnString.charAt(i));
 
     }
