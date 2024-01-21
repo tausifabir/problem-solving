@@ -340,7 +340,7 @@ public class Main {
     int[] increasingTriplet1 = {1, 4, 3, 40, 200};
     int[] increasingTriplet2 = {5, 4, 3, 2, 1};
     int[] increasingTriplet3 = {2, 1, 5, 0, 4, 6};
-    int[] increasingTriplet4 = {20, 100, 10, 12, 5, 13};
+    int[] increasingTriplet4 = {20, 100, 10, 12, 5, 1};
 
 
     // Leet Code 334. Increasing Triplet Subsequence
@@ -349,7 +349,7 @@ public class Main {
         .println("Leet Code 334. Increasing Triplet Subsequence set Problem TestCase => given array: "
             + Arrays.toString(increasingTriplet4)
             + " -> Result: "
-            + increasingTriplet.increasingTripletBeginnerApproachV1(increasingTriplet4));
+            + increasingTriplet.increasingTripletBeginnerApproachV3(increasingTriplet4));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/

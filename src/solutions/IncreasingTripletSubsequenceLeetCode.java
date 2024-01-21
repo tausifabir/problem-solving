@@ -2,7 +2,6 @@ package solutions;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class IncreasingTripletSubsequenceLeetCode {
 
@@ -106,6 +105,34 @@ public class IncreasingTripletSubsequenceLeetCode {
       }
     }
 
+    return false;
+  }
+
+
+
+
+  // Runtime : 2ms, Memory : 134MB.
+  // Passed all Leet Code test cases
+  /** increasingTripletBeginnerApproachV3. */
+  public boolean increasingTripletBeginnerApproachV3(int[] nums) {
+
+    if (nums == null || nums.length < 3) {
+      return false;
+    }
+
+    int leftNumber = Integer.MAX_VALUE;
+    int midNumber = Integer.MAX_VALUE;
+
+    for (int num : nums) {
+
+      if (num <= leftNumber) {
+        leftNumber = num;
+      } else if (num <= midNumber) {
+        midNumber = num;
+      } else {
+        return true;
+      }
+    }
     return false;
   }
 }
