@@ -5,6 +5,7 @@ import linkedlist.PracticeLinkedList;
 import solutions.CanPlaceFlowers;
 import solutions.ContainsDuplicateLeetCode;
 import solutions.GreatestCommonDivisorOfStrings;
+import solutions.IncreasingTripletSubsequenceLeetCode;
 import solutions.KidsWithTheGreatestNumberOfCandies;
 import solutions.LongestCommonPrefix;
 import solutions.MergeAlternately;
@@ -15,6 +16,7 @@ import solutions.ReverseWordsInAString;
 import solutions.RomanToIntegerLeetCode;
 import solutions.SortVowelsInAString;
 import solutions.ValidParentheses;
+
 
 
 public class Main {
@@ -37,6 +39,7 @@ public class Main {
     ReverseWordsInAString reverseWordsInString = new ReverseWordsInAString();
     ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
     SortVowelsInAString sortVowelsInString = new SortVowelsInAString();
+    IncreasingTripletSubsequenceLeetCode increasingTriplet = new IncreasingTripletSubsequenceLeetCode();
 
     System.out.println();
 
@@ -103,10 +106,10 @@ public class Main {
     int[] nums3 = new int[]{1, 1, 1, 3, 3, 4, 3, 2, 4, 2};
     int[] nums4 = new int[]{1, 2, 3, 4};
     // LeetCode 217: Contains Duplicate
-    //System.out.println();
-    //System.out.println("Leet Code 217: Contains Duplicate:  "+codeProblems.containsDuplicate(nums3));
-    //System.out.println("Leet Code 217: Contains Duplicate:  "+codeProblems.containsDuplicateBeginnerApproach(nums4));
-    //System.out.println("Leet Code 217: Contains Duplicate:  "+codeProblems.containsDuplicateSetApproach(nums3));
+    System.out.println();
+    System.out.println("Leet Code 217: Contains Duplicate:  " + codeProblems.containsDuplicate(nums3));
+    System.out.println("Leet Code 217: Contains Duplicate:  " + codeProblems.containsDuplicateBeginnerApproach(nums4));
+    System.out.println("Leet Code 217: Contains Duplicate:  " + codeProblems.containsDuplicateSetApproach(nums3));
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
@@ -324,6 +327,29 @@ public class Main {
             + sortVowels1
             + " -> Result: "
             + sortVowelsInString.sortVowels(sortVowels1));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 334. Increasing Triplet Subsequence set Problem TestCase */
+
+    int[] increasingTriplet1 = {1, 4, 3, 40, 200};
+    int[] increasingTriplet2 = {5, 4, 3, 2, 1};
+    int[] increasingTriplet3 = {2, 1, 5, 0, 4, 6};
+    int[] increasingTriplet4 = {20, 100, 10, 12, 5, 13};
+
+
+    // Leet Code 334. Increasing Triplet Subsequence
+    System.out.println();
+    System.out
+        .println("Leet Code 334. Increasing Triplet Subsequence set Problem TestCase => given array: "
+            + Arrays.toString(increasingTriplet4)
+            + " -> Result: "
+            + increasingTriplet.increasingTripletBeginnerApproachV1(increasingTriplet4));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
