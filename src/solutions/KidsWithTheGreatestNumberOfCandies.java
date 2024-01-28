@@ -6,12 +6,12 @@ import java.util.List;
 
 public class KidsWithTheGreatestNumberOfCandies {
 
-    /*
-
+  /*
      There are n kids with candies. You are given an integer array candies,
      where each candies[i] represents the number of candies the ith kid has,
      and an integer extraCandies, denoting the number of extra candies that you have.
-     Return a boolean array result of length n, where result[i] is true if, after giving the ith kid all the extraCandies,
+     Return a boolean array result of length n, where result[i] is true if,
+     after giving the ith kid all the extraCandies,
      they will have the greatest number of candies among all the kids, or false otherwise.
      Note that multiple kids can have the greatest number of candies.
 
@@ -46,57 +46,55 @@ public class KidsWithTheGreatestNumberOfCandies {
      n == candies.length
      2 <= n <= 100
      1 <= candies[i] <= 100
-     1 <= extraCandies <= 50
-
+     1 <= extraCandies <= 50.
      */
 
-    /*
-     * Runtime : 5ms, Memory : 41.9MB
-     */
-    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
 
-        int[] candies1 = Arrays.stream(candies).sorted().toArray();
 
-        List<Boolean> booleanList = new ArrayList<>();
+  // Runtime : 5ms, Memory : 41.9MB.
+  /** kidsWithCandies. */
+  public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+    int [] candies1 = Arrays.stream(candies).sorted().toArray();
 
-        for (int candy : candies) {
+    List<Boolean> booleanList = new ArrayList<>();
 
-            if (candy + extraCandies >= candies1[candies1.length - 1]) {
-                booleanList.add(true);
-            } else {
-                booleanList.add(false);
-            }
-        }
 
-        return booleanList;
-
+    for (int candy : candies) {
+      if (candy + extraCandies >= candies1[candies1.length - 1]) {
+        booleanList.add(true);
+      } else {
+        booleanList.add(false);
+      }
     }
 
-    /*
-    * Runtime : 1ms, Memory : 41.7MB
-    */
-    public List<Boolean> kidsWithCandiesV2(int[] candies, int extraCandies) {
+    return booleanList;
 
-        int max = candies[0];
+  }
 
-        for (int i=0; i< candies.length; i++){
-            if( i+1 < candies.length && max < candies[i+1]){
-                max = candies[i+1];
-            }
-        }
+  /*
+  * Runtime : 1ms, Memory : 41.7MB
+   */
+  /** kidsWithCandiesV2. */
+  public List<Boolean> kidsWithCandiesV2(int[] candies, int extraCandies) {
 
-        List<Boolean> booleanList = new ArrayList<>();
+    int max = candies[0];
 
-        for (int candy : candies) {
-
-            if (candy + extraCandies >= max) {
-                booleanList.add(true);
-            } else {
-                booleanList.add(false);
-            }
-        }
-
-        return booleanList;
-
+    for (int i = 0; i < candies.length; i++) {
+      if (i + 1 < candies.length && max < candies[i + 1]) {
+        max = candies[i + 1];
+      }
     }
+
+    List<Boolean> booleanList = new ArrayList<>();
+
+    for (int candy : candies) {
+      if (candy + extraCandies >= max) {
+        booleanList.add(true);
+      } else {
+        booleanList.add(false);
+      }
+    }
+
+    return booleanList;
+  }
 }
