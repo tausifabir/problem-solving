@@ -1,5 +1,8 @@
 package solutions;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class StringCompression {
 
   /*
@@ -45,17 +48,35 @@ public class StringCompression {
     */
 
 
-  /**compress.*/
+  /** compress primary thoughtful process .*/
   public int compress(char[] chars) {
 
-    char[] chars2;
+    Set<Character> characterSet = new HashSet<>();
+    char[] chars2 = new char[chars.length];
+    int index = 0;
     for (char i : chars) {
-
-      chars2 = new char[] {i};
-      if (chars2.equals(i)) {
-          return 0;
-      }
+      characterSet.add(i);
     }
-    return 0;
+
+    for (char uniqueChar : characterSet) {
+      int count = 0;
+      for (int j = 0; j < chars.length - 1; j++) {
+        if (uniqueChar == chars[j]) {
+          count++;
+        }
+      }
+
+      chars2[ index++ ] = uniqueChar;
+      if (count > 1) {
+        char[] countChars = Integer.toString(count).toCharArray();
+        for (char c : countChars) {
+          chars2[index++] = c;
+        }
+      }
+
+    }
+    System.arraycopy(chars2, 0, chars, 0, index);
+
+    return index;
   }
 }

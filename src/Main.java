@@ -15,6 +15,7 @@ import solutions.ReverseVowelsOfAString;
 import solutions.ReverseWordsInAString;
 import solutions.RomanToIntegerLeetCode;
 import solutions.SortVowelsInAString;
+import solutions.StringCompression;
 import solutions.ValidParentheses;
 
 
@@ -40,6 +41,7 @@ public class Main {
     ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
     SortVowelsInAString sortVowelsInString = new SortVowelsInAString();
     IncreasingTripletSubsequenceLeetCode increasingTriplet = new IncreasingTripletSubsequenceLeetCode();
+    StringCompression stringCompression = new StringCompression();
 
     System.out.println();
 
@@ -350,6 +352,29 @@ public class Main {
             + Arrays.toString(increasingTriplet4)
             + " -> Result: "
             + increasingTriplet.increasingTripletBeginnerApproachV3(increasingTriplet4));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 443. String Compression set Problem TestCase */
+
+    char [] chars = {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
+    char [] chars1 = {'a'};
+    char [] chars2 = {'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'};
+    char [] chars3 = {'a', 'a', 'a', 'd', 'd', 'e', 'f'};
+
+
+    // Leet Code 443. String Compression
+    System.out.println();
+    System.out
+        .println("Leet Code 443. String Compression set Problem TestCase => given array: "
+            + Arrays.toString(chars2)
+            + " -> Result: "
+            + stringCompression.compress(chars2));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
