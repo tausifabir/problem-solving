@@ -1,6 +1,11 @@
 package solutions;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class StringCompression {
@@ -78,5 +83,86 @@ public class StringCompression {
     System.arraycopy(chars2, 0, chars, 0, index);
 
     return index;
+  }
+
+
+  /** compress primary thoughtful process .*/
+  public int compressV2(char[] chars) {
+
+    Set<Character> characterSet = getCharacterSet(chars);
+
+    if (characterSet != null
+        && characterSet.size() == 1) {
+      return characterSet.size();
+    }
+    Map<Character, Integer> countMap = new HashMap<>();
+    int index = 0;
+
+
+    char[] uniChars = new char[characterSet.size()];
+
+
+    for (Character c : characterSet) {
+      uniChars[index++] = c; // Add each character from the set to the char array
+    }
+
+    System.out.println(uniChars);
+
+    for (int i = 0; i < uniChars.length; i++) {
+      int count = 0;
+      for (int j = 0; j < chars.length; j++) {
+        if (uniChars[i] == chars[j]) {
+          count++;
+          countMap.put(uniChars[i], count);
+          System.out.println(count + " for " + uniChars[i]);
+        }
+      }
+    }
+
+
+
+    List<String> sortedChars = new ArrayList<>();
+    for (Character c : uniChars) {
+
+      int value = countMap.get(c);
+      sortedChars.add(c.toString());
+      if (value > 1) {
+        sortedChars.add(String.valueOf(value));
+      }
+
+    }
+
+    System.out.println(sortedChars);
+    List<String> stringList = Arrays.asList(sortedChars.toString());
+    int totalLength = 0;
+    for (String str : stringList) {
+      totalLength += str.length();
+    }
+
+    chars = new char[totalLength];
+    int index1 = 0;
+    for (String str : stringList) {
+      char[] strChars = str .toCharArray();
+      for (char c : strChars) {
+        chars[index1++] = c;
+      }
+    }
+
+    System.out.println(sortedChars);
+    return sortedChars.size();
+  }
+
+
+  private Set<Character> getCharacterSet(char[] chars) {
+
+    if (chars.length > 0) {
+      Set<Character> characterSet = new HashSet<>();
+      for (char i : chars) {
+        characterSet.add(i);
+      }
+      return characterSet;
+    }
+
+    return null;
   }
 }
