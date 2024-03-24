@@ -53,7 +53,7 @@ public class StringCompression {
     */
 
 
-  /** compress primary thoughtful process .*/
+  /** compress primary thoughtful process 1st approach.*/
   public int compress(char[] chars) {
 
     Set<Character> characterSet = new HashSet<>();
@@ -86,7 +86,7 @@ public class StringCompression {
   }
 
 
-  /** compress primary thoughtful process .*/
+  /** compress primary thoughtful process 2nd approach .*/
   public int compressV2(char[] chars) {
 
     Set<Character> characterSet = getCharacterSet(chars);
@@ -121,35 +121,26 @@ public class StringCompression {
 
 
 
-    List<String> sortedChars = new ArrayList<>();
+    String sortedChars = "";
     for (Character c : uniChars) {
 
+      sortedChars = sortedChars + c;
       int value = countMap.get(c);
-      sortedChars.add(c.toString());
       if (value > 1) {
-        sortedChars.add(String.valueOf(value));
+        sortedChars = sortedChars + value;
       }
 
     }
 
     System.out.println(sortedChars);
-    List<String> stringList = Arrays.asList(sortedChars.toString());
-    int totalLength = 0;
-    for (String str : stringList) {
-      totalLength += str.length();
-    }
 
-    chars = new char[totalLength];
-    int index1 = 0;
-    for (String str : stringList) {
-      char[] strChars = str .toCharArray();
-      for (char c : strChars) {
-        chars[index1++] = c;
-      }
+    for (int i = 0; i < sortedChars.length(); i++) {
+      chars[i] = sortedChars.charAt(i);
     }
 
     System.out.println(sortedChars);
-    return sortedChars.size();
+    System.out.println(chars);
+    return sortedChars.length();
   }
 
 
@@ -165,4 +156,45 @@ public class StringCompression {
 
     return null;
   }
+
+
+
+  // Runtime : 2ms, Memory : 44MB.
+  /** This solution passes all test cases .*/
+  public int compressProperSolution(char[] chars) {
+
+    StringBuilder sb = new StringBuilder();
+
+    int i = 1;
+
+    int count = 1;
+
+    sb.append(chars[0]);
+
+    while (i < chars.length) {
+
+      if (chars[i] == chars[i - 1]) {
+        count++;
+      } else {
+        if (count > 1) {
+          sb.append(count);
+        }
+        sb.append(chars[i]);
+        count = 1;
+      }
+      i++;
+    }
+
+
+    if (count > 1) {
+      sb.append(count);
+    }
+
+    for (int j = 0; j < sb.length(); j++) {
+      chars[j] = sb.charAt(j);
+    }
+
+    return sb.length();
+  }
+
 }

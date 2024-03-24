@@ -374,7 +374,7 @@ public class Main {
         .println("Leet Code 443. String Compression set Problem TestCase => given array: "
             + Arrays.toString(chars2)
             + " -> Result: "
-            + stringCompression.compress(chars2));
+            + stringCompression.compressProperSolution(chars2));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
