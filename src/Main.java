@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import linkedlist.PracticeLinkedList;
 import solutions.CanPlaceFlowers;
+import solutions.ConcatenationArray;
 import solutions.ContainsDuplicateLeetCode;
 import solutions.GreatestCommonDivisorOfStrings;
 import solutions.IncreasingTripletSubsequenceLeetCode;
@@ -42,6 +43,7 @@ public class Main {
     SortVowelsInAString sortVowelsInString = new SortVowelsInAString();
     IncreasingTripletSubsequenceLeetCode increasingTriplet = new IncreasingTripletSubsequenceLeetCode();
     StringCompression stringCompression = new StringCompression();
+    ConcatenationArray concatenationArray = new ConcatenationArray();
 
     System.out.println();
 
@@ -366,6 +368,7 @@ public class Main {
     char [] chars1 = {'a'};
     char [] chars2 = {'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'};
     char [] chars3 = {'a', 'a', 'a', 'd', 'd', 'e', 'f'};
+    int [] nums = {1,2,1};
 
 
     // Leet Code 443. String Compression
@@ -378,6 +381,30 @@ public class Main {
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 1929. Concatenation of Array set Problem TestCase */
+
+    int[] Concatenation1 = {1, 2, 1};
+    int[] Concatenation2 = {1, 3, 2, 1};
+    int[] Concatenation3 = {4, 2, 1, 5};
+    int[] Concatenation4 = {1};
+    int[] Concatenation5 = {1, 2, 1, 4};
+
+
+    // Leet Code 1929. Concatenation of Array
+    System.out.println();
+    System.out
+        .println("Leet Code 1929. Concatenation of Array set Problem TestCase => given array: "
+            + Arrays.toString(Concatenation1)
+            + " -> Result: "
+            + concatenationArray.bestSolutionsV2(Concatenation1));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
 
 
     System.out.println();
