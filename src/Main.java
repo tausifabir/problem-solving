@@ -17,6 +17,7 @@ import solutions.ReverseWordsInAString;
 import solutions.RomanToIntegerLeetCode;
 import solutions.SortVowelsInAString;
 import solutions.StringCompression;
+import solutions.ValidAnagram;
 import solutions.ValidParentheses;
 
 
@@ -44,6 +45,7 @@ public class Main {
     IncreasingTripletSubsequenceLeetCode increasingTriplet = new IncreasingTripletSubsequenceLeetCode();
     StringCompression stringCompression = new StringCompression();
     ConcatenationArray concatenationArray = new ConcatenationArray();
+    ValidAnagram validAnagram = new ValidAnagram();
 
     System.out.println();
 
@@ -208,11 +210,11 @@ public class Main {
     ------------------------------------------------------------------*/
 
     /* Leet Code 1431. Kids With the Greatest Number of Candies of Strings set Problem TestCase */
-    int [] candies1 = {2,3,5,1,3};
+    int[] candies1 = {2, 3, 5, 1, 3};
     int extraCandies1 = 3;
-    int [] candies2 = {12,1,12};
+    int[] candies2 = {12, 1, 12};
     int extraCandies2 = 10;
-    int [] candies3 = {4,2,1,1,2};
+    int[] candies3 = {4, 2, 1, 1, 2};
     int extraCandies3 = 1;
 
     // LeetCode 1431. Kids With the Greatest Number of Candies
@@ -401,6 +403,32 @@ public class Main {
             + Arrays.toString(Concatenation1)
             + " -> Result: "
             + concatenationArray.bestSolutionsV2(Concatenation1));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 242. Valid Anagram set Problem TestCase */
+
+    String anagramS1 = "anagram";
+    String anagramT1 = "nagaram";
+    String anagramS2 = "rat";
+    String anagramT2 = "car";
+    String anagramS3 = "aacc";
+    String anagramT3 = "ccac";
+
+
+
+    // Leet Code 242. Valid Anagram
+    System.out.println();
+    System.out
+        .println("Leet Code 242. Valid Anagram set Problem TestCase => "
+            + "\nGiven 1st String S => " + anagramS3 + " And  2nd String T => " + anagramT3
+            + " -> Result: "
+            + validAnagram.isAnagram(anagramS3, anagramT3));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/

@@ -26,14 +26,6 @@ public class ConcatenationArray {
       - ans = [nums[0],nums[1],nums[2],nums[3],nums[0],nums[1],nums[2],nums[3]]
       - ans = [1,3,2,1,1,3,2,1]
       ------------------------------
-
-      Example 3:
-      ------------------------------
-      ------------------------------
-      Input: chars = ["a","b","b","b","b","b","b","b","b","b","b","b","b"]
-      Output: Return 4, and the first 4 characters of the input array should be: ["a","b","1","2"].
-      Explanation: The groups are "a" and "bbbbbbbbbbbb". This compresses to "ab12".
-      ------------------------------
       ------------------------------
       ------------------------------
 
