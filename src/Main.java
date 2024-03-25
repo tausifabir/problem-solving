@@ -12,6 +12,7 @@ import solutions.LongestCommonPrefix;
 import solutions.MergeAlternately;
 import solutions.MergedTwoUnsortedList;
 import solutions.ProductOfArrayExceptSelf;
+import solutions.ReplaceElementsArray;
 import solutions.ReverseVowelsOfAString;
 import solutions.ReverseWordsInAString;
 import solutions.RomanToIntegerLeetCode;
@@ -46,6 +47,7 @@ public class Main {
     StringCompression stringCompression = new StringCompression();
     ConcatenationArray concatenationArray = new ConcatenationArray();
     ValidAnagram validAnagram = new ValidAnagram();
+    ReplaceElementsArray replaceElementsArray = new ReplaceElementsArray();
 
     System.out.println();
 
@@ -433,6 +435,24 @@ public class Main {
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
 
+
+        /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 1299. Replace Elements with Greatest Element on Right Side set Problem TestCase */
+
+    int [] arrElements1 = {17,18,5,4,6,1};
+    int [] arrElements2 = {17,18,5,4,6,1};
+
+    // Leet Code 1299. Replace Elements with Greatest Element
+    System.out.println();
+    System.out
+        .println("Leet Code 1299. Replace Elements with Greatest Element on Right Side set Problem TestCase => Given " +
+            "arr : " + Arrays.toString(arrElements1)
+            + " -> Result: "
+            + replaceElementsArray.replaceElementsV1(arrElements1));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
 
 
     System.out.println();
