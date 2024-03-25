@@ -440,16 +440,15 @@ public class Main {
     ------------------------------------------------------------------*/
     /* Leet Code 1299. Replace Elements with Greatest Element on Right Side set Problem TestCase */
 
-    int [] arrElements1 = {17,18,5,4,6,1};
-    int [] arrElements2 = {17,18,5,4,6,1};
+    int [] arrElements1 = {17, 18, 5, 4, 6, 1};
+    int [] arrElements2 = {17, 1};
 
     // Leet Code 1299. Replace Elements with Greatest Element
     System.out.println();
     System.out
-        .println("Leet Code 1299. Replace Elements with Greatest Element on Right Side set Problem TestCase => Given " +
-            "arr : " + Arrays.toString(arrElements1)
-            + " -> Result: "
-            + replaceElementsArray.replaceElementsV1(arrElements1));
+        .println("Leet Code 1299. Replace Elements with Greatest Element on Right Side set Problem "
+            + "TestCase => Given arr : " + Arrays.toString(arrElements2)
+            + " -> Result: " + replaceElementsArray.replaceElementsV1(arrElements2));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
