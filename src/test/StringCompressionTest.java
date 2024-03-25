@@ -3,10 +3,10 @@ package test;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import solutions.StringCompression;
 
-class StringCompressionTest {
+public class StringCompressionTest {
 
   @Test
   public void test_no_repeating_characters() {

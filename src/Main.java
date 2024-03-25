@@ -11,6 +11,7 @@ import solutions.KidsWithTheGreatestNumberOfCandies;
 import solutions.LongestCommonPrefix;
 import solutions.MergeAlternately;
 import solutions.MergedTwoUnsortedList;
+import solutions.MoveZeroes;
 import solutions.ProductOfArrayExceptSelf;
 import solutions.ReplaceElementsArray;
 import solutions.ReverseVowelsOfAString;
@@ -48,6 +49,7 @@ public class Main {
     ConcatenationArray concatenationArray = new ConcatenationArray();
     ValidAnagram validAnagram = new ValidAnagram();
     ReplaceElementsArray replaceElementsArray = new ReplaceElementsArray();
+    MoveZeroes moveZeroes = new MoveZeroes();
 
     System.out.println();
 
@@ -404,7 +406,7 @@ public class Main {
         .println("Leet Code 1929. Concatenation of Array set Problem TestCase => given array: "
             + Arrays.toString(Concatenation1)
             + " -> Result: "
-            + concatenationArray.bestSolutionsV2(Concatenation1));
+            + Arrays.toString(concatenationArray.bestSolutionsV2(Concatenation1)));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
@@ -448,7 +450,26 @@ public class Main {
     System.out
         .println("Leet Code 1299. Replace Elements with Greatest Element on Right Side set Problem "
             + "TestCase => Given arr : " + Arrays.toString(arrElements2)
-            + " -> Result: " + replaceElementsArray.replaceElementsV1(arrElements2));
+            + " -> Result: " + Arrays.toString(replaceElementsArray.replaceElementsV1(arrElements2)));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+        /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 283. Move zeros set Problem TestCase */
+
+    int [] numsZeros1 = {0, 1, 0, 3, 12};
+    int [] numsZeros2 = {0};
+
+    // Leet Code 283. Move zeros
+    System.out.println();
+    System.out
+        .println("Leet Code283. Move zeros set Problem TestCase => "
+            + "\nGiven array => " + Arrays.toString(numsZeros1)
+            + " -> Result: "
+            + Arrays.toString(moveZeroes.movingZeroes(numsZeros1)));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
