@@ -462,6 +462,10 @@ public class Main {
 
     int [] numsZeros1 = {0, 1, 0, 3, 12};
     int [] numsZeros2 = {0};
+    int [] numsZeros3 = {2,1};
+    int [] numsZeros4 = {0,1,0};
+    int [] numsZeros5 = {4,2,4,0,0,3,0,5,1,0};
+    int [] numsZeros6 = {0,1,5,0,12,9,0};
 
     // Leet Code 283. Move zeros
     System.out.println();
@@ -469,7 +473,7 @@ public class Main {
         .println("Leet Code283. Move zeros set Problem TestCase => "
             + "\nGiven array => " + Arrays.toString(numsZeros1)
             + " -> Result: "
-            + Arrays.toString(moveZeroes.movingZeroes(numsZeros1)));
+            + Arrays.toString(moveZeroes.movingZeroesV3(numsZeros1)));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
