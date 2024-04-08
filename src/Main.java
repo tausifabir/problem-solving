@@ -7,6 +7,7 @@ import solutions.ConcatenationArray;
 import solutions.ContainsDuplicateLeetCode;
 import solutions.GreatestCommonDivisorOfStrings;
 import solutions.IncreasingTripletSubsequenceLeetCode;
+import solutions.IsSubsequence;
 import solutions.KidsWithTheGreatestNumberOfCandies;
 import solutions.LongestCommonPrefix;
 import solutions.MergeAlternately;
@@ -50,6 +51,7 @@ public class Main {
     ValidAnagram validAnagram = new ValidAnagram();
     ReplaceElementsArray replaceElementsArray = new ReplaceElementsArray();
     MoveZeroes moveZeroes = new MoveZeroes();
+    IsSubsequence isSubsequence = new IsSubsequence();
 
     System.out.println();
 
@@ -456,7 +458,7 @@ public class Main {
     ------------------------------------------------------------------*/
 
 
-        /*----------------------------------------------------------------
+    /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
     /* Leet Code 283. Move zeros set Problem TestCase */
 
@@ -474,6 +476,40 @@ public class Main {
             + "\nGiven array => " + Arrays.toString(numsZeros1)
             + " -> Result: "
             + Arrays.toString(moveZeroes.movingZeroesV3(numsZeros1)));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 392. Is Subsequence set Problem TestCase */
+
+    String isSubsequenceS = "ace";
+    String isSubsequenceT = "abcde";
+    String isSubsequenceS1 = "ace";
+    String isSubsequenceT1 = "cbade";
+    String isSubsequenceS2 = "abc";
+    String isSubsequenceT2 = "ahbgdc";
+    String isSubsequenceS3 = "axc";
+    String isSubsequenceT3 = "ahbgdc";
+    String isSubsequenceS4 = "ab";
+    String isSubsequenceT4 = "baab";
+    String isSubsequenceS5 = "";
+    String isSubsequenceT5 = "ahbgdc";
+    String isSubsequenceS6 = "abc";
+    String isSubsequenceT6 = "";
+    String isSubsequenceS7 = "b";
+    String isSubsequenceT7 = "abc";
+
+    //  Leet Code 392. Is Subsequence
+    System.out.println();
+    System.out
+        .println("Leet Code392. Is Subsequence set Problem TestCase => "
+            + "\ngiven String s: " + isSubsequenceS7 + " and given String T: " + isSubsequenceT7
+            + " -> Result: "
+            + isSubsequence.isSubsequenceV3(isSubsequenceS7, isSubsequenceT7));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
