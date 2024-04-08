@@ -157,7 +157,6 @@ public class IsSubsequence {
       }
       j++;
     }
-
     return i == s.length();
   }
 
