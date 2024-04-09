@@ -21,7 +21,9 @@ import solutions.ReverseWordsInAString;
 import solutions.RomanToIntegerLeetCode;
 import solutions.SortVowelsInAString;
 import solutions.StringCompression;
+import solutions.TwoSum;
 import solutions.ValidAnagram;
+import solutions.ValidPalindrome;
 import solutions.ValidParentheses;
 
 
@@ -54,6 +56,8 @@ public class Main {
     MoveZeroes moveZeroes = new MoveZeroes();
     IsSubsequence isSubsequence = new IsSubsequence();
     ContainerWithMostWater container = new ContainerWithMostWater();
+    ValidPalindrome validPalindrome = new ValidPalindrome();
+    TwoSum callTwoSum = new TwoSum();
 
     System.out.println();
 
@@ -535,6 +539,52 @@ public class Main {
             + "\nGiven array => " + Arrays.toString(height1)
             + " -> Result: "
             + container.maxArea(height1));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 125. Valid Palindrome set Problem TestCase */
+
+    String isvalidPalindrome1 = "A man, a plan, a canal: Panama";
+    String isvalidPalindrome2 = "race a car";
+    String isvalidPalindrome3 = " ";
+    String isvalidPalindrome4 = "Level";
+    String isvalidPalindrome5 = "1b1";
+
+
+    // Leet Code 125. Valid Palindrome
+    System.out.println();
+    System.out
+        .println("Leet Code 125. Valid Palindrome set Problem TestCase => "
+            + "\nGiven String => " + isvalidPalindrome4
+            + " -> Result: "
+            + validPalindrome.isPalindromeV2(isvalidPalindrome4));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 1. Two Sum set Problem TestCase */
+
+    int [] twoSum1 = {2,7,11,15};
+    int target1 = 9;
+    int [] twoSum2 = {3,2,4};
+    int target2 = 6;
+    int [] twoSum3 = {3,3};
+    int target3 = 6;
+
+
+    // Leet Code 1. Two Sum
+    System.out.println();
+    System.out.println("LeetCode 1. Two Sum set Problem TestCase =>  "
+        + "\ngiven array: " + Arrays.toString(twoSum2) + ", target: " + target2
+        + "\n  -> Result: " + Arrays.toString(callTwoSum.twoSumV2(twoSum2, target2)));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
