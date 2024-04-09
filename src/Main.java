@@ -4,6 +4,7 @@ import java.util.Arrays;
 import linkedlist.PracticeLinkedList;
 import solutions.CanPlaceFlowers;
 import solutions.ConcatenationArray;
+import solutions.ContainerWithMostWater;
 import solutions.ContainsDuplicateLeetCode;
 import solutions.GreatestCommonDivisorOfStrings;
 import solutions.IncreasingTripletSubsequenceLeetCode;
@@ -52,6 +53,7 @@ public class Main {
     ReplaceElementsArray replaceElementsArray = new ReplaceElementsArray();
     MoveZeroes moveZeroes = new MoveZeroes();
     IsSubsequence isSubsequence = new IsSubsequence();
+    ContainerWithMostWater container = new ContainerWithMostWater();
 
     System.out.println();
 
@@ -472,7 +474,7 @@ public class Main {
     // Leet Code 283. Move zeros
     System.out.println();
     System.out
-        .println("Leet Code283. Move zeros set Problem TestCase => "
+        .println("Leet Code 283. Move zeros set Problem TestCase => "
             + "\nGiven array => " + Arrays.toString(numsZeros1)
             + " -> Result: "
             + Arrays.toString(moveZeroes.movingZeroesV3(numsZeros1)));
@@ -510,6 +512,29 @@ public class Main {
             + "\ngiven String s: " + isSubsequenceS7 + " and given String T: " + isSubsequenceT7
             + " -> Result: "
             + isSubsequence.isSubsequenceV3(isSubsequenceS7, isSubsequenceT7));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 11. Container With Most Water set Problem TestCase */
+
+    int [] height1 = {0, 1, 0, 3, 12};
+    int [] height2 = {0};
+    int [] height3 = {2,1};
+    int [] height4 = {0,1,0};
+
+
+    // Leet Code 11. Container With Most Water
+    System.out.println();
+    System.out
+        .println("Leet Code 11. Container With Most Water set Problem TestCase => "
+            + "\nGiven array => " + Arrays.toString(height1)
+            + " -> Result: "
+            + container.maxArea(height1));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
