@@ -1,5 +1,8 @@
 package solutions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ContainerWithMostWater {
 
    /*
@@ -40,7 +43,53 @@ public class ContainerWithMostWater {
   /** primary thoughtful process 1st approach.*/
   public int maxArea(int[] height) {
 
-    return 0;
+    int firstIndex = height[0];
+    int LastIndex = height[height.length - 1];
+    int maxArea = 0;
+
+    while (firstIndex < LastIndex) {
+
+      int firstWidth = firstIndex;
+      int lastWidth = height[height.length - 1];
+      while (firstWidth < lastWidth) {
+
+        int tempMaxArea = height[firstWidth] * lastWidth;
+        if(tempMaxArea> maxArea) {
+          maxArea = tempMaxArea;
+        }
+        lastWidth--;
+      }
+      firstIndex++;
+    }
+
+    return maxArea;
+
+  }
+
+  public List<List<Integer>> threeSum() {
+
+    int [] nums = {-1,0,1,2,-1,-4};
+
+    //Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]]
+    // such that i != j, i != k, and j != k,
+    // and nums[i] + nums[j] + nums[k] == 0.
+
+    // [[-1,-1,2],[-1,0,1]
+
+
+    int firstIndex = nums[0];
+    int lastIndex = nums[nums.length-1];
+
+    while (firstIndex < lastIndex) {
+      int leftNumber = nums[firstIndex];
+      int rightNumber = nums[lastIndex];
+
+
+
+    }
+
+    List<List<Integer>> result = new ArrayList<>();
+    return result;
   }
 
 }
