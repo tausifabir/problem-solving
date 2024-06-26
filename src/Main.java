@@ -22,6 +22,7 @@ import solutions.RomanToIntegerLeetCode;
 import solutions.SortVowelsInAString;
 import solutions.StringCompression;
 import solutions.TwoSum;
+import solutions.TwoSumIIInput;
 import solutions.ValidAnagram;
 import solutions.ValidPalindrome;
 import solutions.ValidParentheses;
@@ -58,6 +59,7 @@ public class Main {
     ContainerWithMostWater container = new ContainerWithMostWater();
     ValidPalindrome validPalindrome = new ValidPalindrome();
     TwoSum callTwoSum = new TwoSum();
+    TwoSumIIInput sumIIInput = new TwoSumIIInput();
 
     System.out.println();
 
@@ -581,9 +583,31 @@ public class Main {
     System.out.println();
     System.out
         .println("Leet Code 11. Container With Most Water set Problem TestCase => "
-            + "\nGiven array => " + Arrays.toString(height5)
+            + "\nGiven array => " + Arrays.toString(height3)
             + " -> Result: "
-            + container.maxArea(height5));
+            + container.maxAreaV3(height3));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 167. Two Sum II - Input Array Is Sorted set Problem TestCase */
+
+    int [] twoSumII1 = {2,7,11,15};
+    int targetII1 = 9;
+    int [] twoSumII2 = {3,2,4};
+    int targetII2 = 6;
+    int [] twoSumII3 = {3,3};
+    int targetII3 = 6;
+
+
+    // Leet Code 167. Two Sum II - Input Array Is Sorted
+    System.out.println();
+    System.out.println("Leet Code 167. Two Sum II - Input Array Is Sorted Problem TestCase =>  "
+        + "\ngiven array: " + Arrays.toString(twoSum2) + ", target: " + target2
+        + "\n  -> Result: " + Arrays.toString(sumIIInput.twoSumII(twoSumII2, targetII2)));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
