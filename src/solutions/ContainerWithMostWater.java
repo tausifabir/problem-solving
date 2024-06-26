@@ -40,7 +40,9 @@ public class ContainerWithMostWater {
    */
 
 
-  /** primary thoughtful process 1st approach. Time Limit Exceeded.*/
+  /**
+   * primary thoughtful process 1st approach. Time Limit Exceeded.
+   */
   public int maxArea(int[] height) {
 
     int firstIndex = 0;
@@ -53,15 +55,15 @@ public class ContainerWithMostWater {
       int lastWidth = height.length - 1;
 
       while (firstWidth < lastWidth) {
-        int width = lastWidth-firstIndex;
+        int width = lastWidth - firstIndex;
         int tempMaxArea = 0;
         if (height[lastWidth] < height[firstWidth]) {
           tempMaxArea = height[lastWidth] * width;
-        }else {
+        } else {
           tempMaxArea = height[firstWidth] * width;
         }
 
-        if(tempMaxArea> maxArea) {
+        if (tempMaxArea > maxArea) {
           maxArea = tempMaxArea;
         }
         lastWidth--;
@@ -72,7 +74,10 @@ public class ContainerWithMostWater {
   }
 
 
-  /** primary thoughtful process 2nd approach.*/
+  /**
+   * primary thoughtful process 2nd approach.
+   */
+  // Runtime : 3ms, Memory : 57MB.
   public int maxAreaV2(int[] height) {
 
     int firstIndex = 0;
@@ -80,27 +85,47 @@ public class ContainerWithMostWater {
     int maxArea = 0;
 
     while (firstIndex < LastIndex) {
-
-      int firstWidth = firstIndex;
-      int lastWidth = height.length - 1;
-
-      while (firstWidth < lastWidth) {
-        int width = lastWidth-firstIndex;
-        int tempMaxArea = 0;
-        if (height[lastWidth] < height[firstWidth]) {
-          tempMaxArea = height[lastWidth] * width;
-        }else {
-          tempMaxArea = height[firstWidth] * width;
-        }
-
-        if(tempMaxArea> maxArea) {
-          maxArea = tempMaxArea;
-        }
-        lastWidth--;
+      if (height[firstIndex] < height[LastIndex]) {
+        maxArea = Math.max(maxArea, height[firstIndex] * (LastIndex - firstIndex));
+        firstIndex++;
+      } else {
+        maxArea = Math.max(maxArea, height[LastIndex] * (LastIndex - firstIndex));
+        LastIndex--;
       }
-      firstIndex++;
     }
     return maxArea;
+  }
+
+  /**
+   * Best Solution.
+   */
+  // Runtime : 1ms, Memory : 57MB.
+  public int maxAreaV3(int[] height) {
+
+    int s = 0, e = height.length - 1;
+    int max = 0;
+    while (s < e) {
+      if (height[s] > height[e]) {
+        int area = height[e] * (e - s);
+        if (max < area) {
+          max = area;
+        }
+        int c = height[e];
+        while (e >= 0 && height[e] <= c) {
+          e--;
+        }
+      } else {
+        int area = height[s] * (e - s);
+        if (max < area) {
+          max = area;
+        }
+        int c = height[s];
+        while (s < height.length && height[s] <= c) {
+          s++;
+        }
+      }
+    }
+    return max;
   }
 
 
