@@ -521,30 +521,6 @@ public class Main {
     ------------------------------------------------------------------*/
 
 
-
-    /*----------------------------------------------------------------
-    ------------------------------------------------------------------*/
-    /* Leet Code 11. Container With Most Water set Problem TestCase */
-
-    int [] height1 = {0, 1, 0, 3, 12};
-    int [] height2 = {0};
-    int [] height3 = {2,1};
-    int [] height4 = {0,1,0};
-
-
-    // Leet Code 11. Container With Most Water
-    System.out.println();
-    System.out
-        .println("Leet Code 11. Container With Most Water set Problem TestCase => "
-            + "\nGiven array => " + Arrays.toString(height1)
-            + " -> Result: "
-            + container.maxArea(height1));
-
-    /*----------------------------------------------------------------
-    ------------------------------------------------------------------*/
-
-
-
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
     /* Leet Code 125. Valid Palindrome set Problem TestCase */
@@ -582,9 +558,32 @@ public class Main {
 
     // Leet Code 1. Two Sum
     System.out.println();
-    System.out.println("LeetCode 1. Two Sum set Problem TestCase =>  "
+    System.out.println("Leet Code 1. Two Sum set Problem TestCase =>  "
         + "\ngiven array: " + Arrays.toString(twoSum2) + ", target: " + target2
         + "\n  -> Result: " + Arrays.toString(callTwoSum.twoSumV2(twoSum2, target2)));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 11. Container With Most Water set Problem TestCase */
+
+    int [] height1 = {0, 1, 0, 3, 12};
+    int [] height2 = {0};
+    int [] height3 = {1,8,6,2,5,4,8,3,7};
+    int [] height4 = {0,1,0};
+    int [] height5 = {1, 1};
+
+
+    // Leet Code 11. Container With Most Water
+    System.out.println();
+    System.out
+        .println("Leet Code 11. Container With Most Water set Problem TestCase => "
+            + "\nGiven array => " + Arrays.toString(height5)
+            + " -> Result: "
+            + container.maxArea(height5));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/

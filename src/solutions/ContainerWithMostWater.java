@@ -40,20 +40,27 @@ public class ContainerWithMostWater {
    */
 
 
-  /** primary thoughtful process 1st approach.*/
+  /** primary thoughtful process 1st approach. Time Limit Exceeded.*/
   public int maxArea(int[] height) {
 
-    int firstIndex = height[0];
-    int LastIndex = height[height.length - 1];
+    int firstIndex = 0;
+    int LastIndex = height.length - 1;
     int maxArea = 0;
 
     while (firstIndex < LastIndex) {
 
       int firstWidth = firstIndex;
-      int lastWidth = height[height.length - 1];
-      while (firstWidth < lastWidth) {
+      int lastWidth = height.length - 1;
 
-        int tempMaxArea = height[firstWidth] * lastWidth;
+      while (firstWidth < lastWidth) {
+        int width = lastWidth-firstIndex;
+        int tempMaxArea = 0;
+        if (height[lastWidth] < height[firstWidth]) {
+          tempMaxArea = height[lastWidth] * width;
+        }else {
+          tempMaxArea = height[firstWidth] * width;
+        }
+
         if(tempMaxArea> maxArea) {
           maxArea = tempMaxArea;
         }
@@ -61,35 +68,40 @@ public class ContainerWithMostWater {
       }
       firstIndex++;
     }
-
     return maxArea;
-
   }
 
-  public List<List<Integer>> threeSum() {
 
-    int [] nums = {-1,0,1,2,-1,-4};
+  /** primary thoughtful process 2nd approach.*/
+  public int maxAreaV2(int[] height) {
 
-    //Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]]
-    // such that i != j, i != k, and j != k,
-    // and nums[i] + nums[j] + nums[k] == 0.
+    int firstIndex = 0;
+    int LastIndex = height.length - 1;
+    int maxArea = 0;
 
-    // [[-1,-1,2],[-1,0,1]
+    while (firstIndex < LastIndex) {
 
+      int firstWidth = firstIndex;
+      int lastWidth = height.length - 1;
 
-    int firstIndex = nums[0];
-    int lastIndex = nums[nums.length-1];
+      while (firstWidth < lastWidth) {
+        int width = lastWidth-firstIndex;
+        int tempMaxArea = 0;
+        if (height[lastWidth] < height[firstWidth]) {
+          tempMaxArea = height[lastWidth] * width;
+        }else {
+          tempMaxArea = height[firstWidth] * width;
+        }
 
-    while (firstIndex < lastIndex) {
-      int leftNumber = nums[firstIndex];
-      int rightNumber = nums[lastIndex];
-
-
-
+        if(tempMaxArea> maxArea) {
+          maxArea = tempMaxArea;
+        }
+        lastWidth--;
+      }
+      firstIndex++;
     }
-
-    List<List<Integer>> result = new ArrayList<>();
-    return result;
+    return maxArea;
   }
+
 
 }
