@@ -606,8 +606,8 @@ public class Main {
     // Leet Code 167. Two Sum II - Input Array Is Sorted
     System.out.println();
     System.out.println("Leet Code 167. Two Sum II - Input Array Is Sorted Problem TestCase =>  "
-        + "\ngiven array: " + Arrays.toString(twoSum2) + ", target: " + target2
-        + "\n  -> Result: " + Arrays.toString(sumIIInput.twoSumII(twoSumII2, targetII2)));
+        + "\ngiven array: " + Arrays.toString(twoSumII1) + ", target: " + targetII1
+        + "\n  -> Result: " + Arrays.toString(sumIIInput.twoSumII(twoSumII1, targetII1)));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/

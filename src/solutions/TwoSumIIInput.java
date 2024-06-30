@@ -53,11 +53,53 @@ public class TwoSumIIInput {
       ------------------------------
    */
 
-  /**
-   * primary thoughtful process 2nd approach.
-   */
-  // Runtime : 3ms, Memory : 57MB.
-  public int[] twoSumII(int[] numbers, int target) {
-    return null;
-  }
+    /**
+     * primary thoughtful process 1st approach.
+     */
+    // Runtime : 405ms, Memory : 47MB.
+    public int[] twoSumII(int[] numbers, int target) {
+
+        int[] newArray = new int[2];
+        int firstIndex = 0;
+        int lastIndex = numbers.length - 1;
+
+        while (firstIndex < numbers.length) {
+            for (int i = lastIndex; i > firstIndex; i--) {
+                if (numbers[firstIndex] + numbers[i] == target) {
+
+                    newArray[0] = firstIndex + 1;
+                    newArray[1] = i + 1;
+                    return newArray;
+
+                }
+            }
+            firstIndex++;
+        }
+        return null;
+    }
+
+
+    /**
+     * Best approach.
+     */
+    // Runtime : 0ms, Memory : 47MB.
+    public int[] twoSumIIV2(int[] numbers, int target) {
+        int n = numbers.length;
+        int low = 0;
+        int high = n - 1;
+        while (low < high) {
+            int sum = numbers[low] + numbers[high];
+            int mid = (low + high) / 2;
+            if (sum == target) return new int[]{low + 1, high + 1};
+            else if (sum > target) {
+                if (numbers[low] + numbers[mid] > target) high = mid - 1;
+                else high--;
+            } else {
+                if (numbers[mid] + numbers[high] < target) low = mid + 1;
+                else low++;
+            }
+
+        }
+        return new int[]{-1, -1};
+    }
 }
