@@ -21,6 +21,7 @@ import solutions.ReverseWordsInAString;
 import solutions.RomanToIntegerLeetCode;
 import solutions.SortVowelsInAString;
 import solutions.StringCompression;
+import solutions.TopKFrequent;
 import solutions.TwoSum;
 import solutions.TwoSumIIInput;
 import solutions.ValidAnagram;
@@ -59,6 +60,7 @@ public class Main {
     ContainerWithMostWater container = new ContainerWithMostWater();
     ValidPalindrome validPalindrome = new ValidPalindrome();
     TwoSum callTwoSum = new TwoSum();
+    TopKFrequent topKFrequent = new TopKFrequent();
     TwoSumIIInput sumIIInput = new TwoSumIIInput();
 
     System.out.println();
@@ -608,6 +610,30 @@ public class Main {
     System.out.println("Leet Code 167. Two Sum II - Input Array Is Sorted Problem TestCase =>  "
         + "\ngiven array: " + Arrays.toString(twoSumII1) + ", target: " + targetII1
         + "\n  -> Result: " + Arrays.toString(sumIIInput.twoSumII(twoSumII1, targetII1)));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 347. Top K Frequent Elements Problem TestCase */
+
+    int [] topKNums1 = {1,2,2,3,3,3};
+    int topK1 = 2;
+    int [] topKNums2 = {7,7};
+    int topK2 = 1;
+    int [] topKNums3 = {1,2,3,4,1,2,5,4,2};
+    int topK3 = 1;
+
+
+    // Leet Code 347. Top K Frequent Elements
+    System.out.println();
+    System.out.println("Leet Code 347. Top K Frequent Elements TestCase =>  "
+        + "\ngiven array: " + Arrays.toString(topKNums1) + ", target: " + topK1
+        + "\n  -> Result: " + Arrays.toString(topKFrequent.topKFrequent(topKNums1, topK1)));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
