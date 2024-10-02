@@ -1,7 +1,6 @@
 package solutions;
 
-import java.util.HashMap;
-import java.util.Hashtable;
+import java.util.*;
 
 public class TopKFrequent {
 
@@ -43,10 +42,14 @@ public class TopKFrequent {
     }
 
     int [] returnArray = new int[k];
-    Hashtable<Integer, Integer>  givenUniqueNumber = new Hashtable<>();
+    HashMap<Integer, Integer>  givenUniqueNumber = new HashMap<>();
+
 
     for (int num : nums) {
-      givenUniqueNumber.put(num,0);
+      if(!givenUniqueNumber.containsKey(num)){
+        givenUniqueNumber.put(num,0);
+      }
+
     }
 
     for (int num : nums) {
@@ -55,11 +58,11 @@ public class TopKFrequent {
       }
     }
 
-
-
-
-      System.out.println(givenUniqueNumber.elements());
-
+    int index = 0;
+    while (index < k) {
+      returnArray [index] = givenUniqueNumber.get();
+      index++;
+    }
 
     return returnArray;
   }
