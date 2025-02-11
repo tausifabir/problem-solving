@@ -652,9 +652,9 @@ public class Main {
     String [] grpStrs1 = {""};
 
 
-    // Leet Code 347. Top K Frequent Elements
+    // Leet Code 47. Group Anagrams
     System.out.println();
-    System.out.println("Leet Code 347. Top K Frequent Elements TestCase =>  "
+    System.out.println("Leet Code 47. Group Anagrams TestCase =>  "
         + "\nGiven array => " + Arrays.toString(grpStrs)
         + " -> Result: "
         + groupAnagrams.groupAnagrams(grpStrs));
