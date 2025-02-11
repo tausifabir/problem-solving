@@ -76,6 +76,6 @@ public class ThreeSum {
             }
             firstIndex++;
         }
-        return result;
+        return new ArrayList<>();
     }
 }

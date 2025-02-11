@@ -621,12 +621,14 @@ public class Main {
     ------------------------------------------------------------------*/
     /* Leet Code 347. Top K Frequent Elements Problem TestCase */
 
-    int [] topKNums1 = {1,2,2,3,3,3};
+    int [] topKNums1 = {1,1,1,2,2,3};
     int topK1 = 2;
-    int [] topKNums2 = {7,7};
-    int topK2 = 1;
-    int [] topKNums3 = {1,2,3,4,1,2,5,4,2};
+    int [] topKNums2 = {1,2,2,3,3,3};
+    int topK2 = 2;
+    int [] topKNums3 = {7,7};
     int topK3 = 1;
+    int [] topKNums4 = {1,2,3,1,2,5,4,2};
+    int topK4 = 1;
 
 
     // Leet Code 347. Top K Frequent Elements
