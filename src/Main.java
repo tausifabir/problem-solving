@@ -7,6 +7,7 @@ import solutions.ConcatenationArray;
 import solutions.ContainerWithMostWater;
 import solutions.ContainsDuplicateLeetCode;
 import solutions.GreatestCommonDivisorOfStrings;
+import solutions.GroupAnagrams;
 import solutions.IncreasingTripletSubsequenceLeetCode;
 import solutions.IsSubsequence;
 import solutions.KidsWithTheGreatestNumberOfCandies;
@@ -62,6 +63,7 @@ public class Main {
     TwoSum callTwoSum = new TwoSum();
     TopKFrequent topKFrequent = new TopKFrequent();
     TwoSumIIInput sumIIInput = new TwoSumIIInput();
+    GroupAnagrams groupAnagrams = new GroupAnagrams();
 
     System.out.println();
 
@@ -636,6 +638,26 @@ public class Main {
     System.out.println("Leet Code 347. Top K Frequent Elements TestCase =>  "
         + "\ngiven array: " + Arrays.toString(topKNums1) + ", target: " + topK1
         + "\n  -> Result: " + Arrays.toString(topKFrequent.topKFrequent(topKNums1, topK1)));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 47. Group Anagrams Problem TestCase */
+
+    String [] grpStrs = {"eat","tea","tan","ate","nat","bat"};
+    String [] grpStrs1 = {""};
+
+
+    // Leet Code 347. Top K Frequent Elements
+    System.out.println();
+    System.out.println("Leet Code 347. Top K Frequent Elements TestCase =>  "
+        + "\nGiven array => " + Arrays.toString(grpStrs)
+        + " -> Result: "
+        + groupAnagrams.groupAnagrams(grpStrs));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
