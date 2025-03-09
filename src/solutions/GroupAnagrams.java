@@ -1,8 +1,11 @@
 package solutions;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class GroupAnagrams {
 
@@ -51,12 +54,35 @@ public class GroupAnagrams {
 
 
 
-  // Runtime : 5ms, Memory : 41.9MB.
+  // Runtime : 7ms, Memory : 48.9MB.
   //primary thoughtful process 1st approach. Time Limit Exceeded.
-  /** kidsWithCandies. */
-  public List<List<String>> groupAnagrams(String[] strs) {
-      List<String> result = new ArrayList<>();
-      List<String> returnList = new ArrayList<>();
-      return Collections.singletonList(result);
+  /** groupAnagrams. */
+  public List<List<String>> groupAnagrams(String[] strings) {
+
+
+    Map<String, List<String>> map = new HashMap<>();
+
+    for (String str : strings) {
+      char[] chars = str.toCharArray();
+      Arrays.sort(chars);
+      String sortedMapKey = new String(chars);
+      if (map.containsKey(sortedMapKey)) {
+        map.get(sortedMapKey).add(str);
+      } else {
+        List<String> list = new ArrayList<>();
+        list.add(str);
+        map.put(sortedMapKey, list);
+      }
+
+    }
+
+    List<List<String>> returnCollectionList = new ArrayList<>();
+
+    for (String str : map.keySet()) {
+      List<String> list = map.get(str);
+      returnCollectionList.add(list);
+    }
+
+    return returnCollectionList;
   }
 }

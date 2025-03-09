@@ -648,16 +648,16 @@ public class Main {
     ------------------------------------------------------------------*/
     /* Leet Code 47. Group Anagrams Problem TestCase */
 
-    String [] grpStrs = {"eat","tea","tan","ate","nat","bat"};
+    String [] grpStrs = {"eat","tea","ate","tan","nat","bat"};
     String [] grpStrs1 = {""};
 
 
     // Leet Code 47. Group Anagrams
     System.out.println();
     System.out.println("Leet Code 47. Group Anagrams TestCase =>  "
-        + "\nGiven array => " + Arrays.toString(grpStrs)
+        + "\nGiven array => " + Arrays.toString(grpStrs1)
         + " -> Result: "
-        + groupAnagrams.groupAnagrams(grpStrs));
+        + groupAnagrams.groupAnagrams(grpStrs1));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
