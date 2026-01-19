@@ -128,5 +128,30 @@ public class ContainerWithMostWater {
     return max;
   }
 
+  public int maxAreaV4(int[] height) {
+    int left = 0;
+    int right = height.length - 1;
+    int best = 0;
+
+    while (left < right) {
+
+      int current;
+
+      if (height[left] < height[right]) {
+        current = height[left] * (right - left);
+        left++;   // move smaller wall
+      } else {
+        current = height[right] * (right - left);
+        right--;  // move smaller wall
+      }
+
+      if (current > best) {
+        best = current;
+      }
+    }
+
+    return best;
+  }
+
 
 }
