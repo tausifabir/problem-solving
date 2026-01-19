@@ -2,33 +2,7 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import linkedlist.PracticeLinkedList;
-import solutions.CanPlaceFlowers;
-import solutions.ConcatenationArray;
-import solutions.ContainerWithMostWater;
-import solutions.ContainsDuplicateLeetCode;
-import solutions.GreatestCommonDivisorOfStrings;
-import solutions.GroupAnagrams;
-import solutions.IncreasingTripletSubsequenceLeetCode;
-import solutions.IsSubsequence;
-import solutions.KidsWithTheGreatestNumberOfCandies;
-import solutions.LongestCommonPrefix;
-import solutions.MergeAlternately;
-import solutions.MergedTwoUnsortedList;
-import solutions.MoveZeroes;
-import solutions.ProductOfArrayExceptSelf;
-import solutions.ReplaceElementsArray;
-import solutions.ReverseVowelsOfAString;
-import solutions.ReverseWordsInAString;
-import solutions.RomanToIntegerLeetCode;
-import solutions.SortVowelsInAString;
-import solutions.StringCompression;
-import solutions.TopKFrequent;
-import solutions.TwoSum;
-import solutions.TwoSumIIInput;
-import solutions.ValidAnagram;
-import solutions.ValidPalindrome;
-import solutions.ValidParentheses;
-
+import solutions.*;
 
 
 public class Main {
@@ -64,6 +38,7 @@ public class Main {
     TopKFrequent topKFrequent = new TopKFrequent();
     TwoSumIIInput sumIIInput = new TwoSumIIInput();
     GroupAnagrams groupAnagrams = new GroupAnagrams();
+    ThreeSum threeSum = new ThreeSum();
 
     System.out.println();
 
@@ -658,6 +633,25 @@ public class Main {
         + "\nGiven array => " + Arrays.toString(grpStrs1)
         + " -> Result: "
         + groupAnagrams.groupAnagrams(grpStrs1));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 15. 3Sum TestCase */
+
+     int [] threeSum1 = {-1,0,1,2,-1,-4};
+     int [] threeSum2 = {0,1,1};
+
+
+     // Leet Code 15. 3Sum TestCase
+     System.out.println();
+     System.out.println("Leet Code 15. 3Sum TestCase =>  "
+             + "\nGiven array => " + Arrays.toString(threeSum1)
+             + " -> Result: "
+             + threeSum.threeSum(threeSum1));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/

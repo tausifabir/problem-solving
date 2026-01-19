@@ -1,6 +1,7 @@
 package solutions;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ThreeSum {
@@ -54,28 +55,76 @@ public class ThreeSum {
     /**
      * primary thoughtful process 1st approach.
      */
-    // Runtime : 405ms, Memory : 47MB.
+    // Runtime : 34s, Memory : 60MB.
     public List<List<Integer>> threeSum(int[] nums) {
 
-        List<int[]> result = new ArrayList<>();
+        List<List<Integer>> result = new ArrayList<>();
 
-        int firstIndex = 0;
-        int lastIndex = nums.length - 1;
+        // Step 1: Sort the array
+        Arrays.sort(nums);
 
-        while (firstIndex < lastIndex) {
+        // Step 2: Fix the first number
+        for (int i = 0; i < nums.length - 2; i++) {
 
-            for (int i = firstIndex; i < lastIndex; i++) {
-                if (nums[firstIndex] + nums[lastIndex] + nums[i] == 0) {
-                    int[] newArray = new int[3];
-                    newArray[0] = nums[firstIndex];
-                    newArray[1] = nums[lastIndex];
-                    newArray[2] = nums[i];
-                    result.add(newArray);
+            // Skip duplicate first numbers
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
 
+            int leftPointer = i + 1;
+            int rightPointer = nums.length - 1;
+
+            System.out.println("I pointer: " + nums[i]);
+            System.out.println("Left pointer: " + nums[leftPointer]);
+            System.out.println("Right pointer: " + nums[rightPointer]);
+
+            // Step 3: Two-pointer search
+            while (leftPointer < rightPointer) {
+
+                int currentSum = nums[i] + nums[leftPointer] + nums[rightPointer];
+
+
+                System.out.println("Inside I pointer: " + nums[i]);
+                System.out.println("Inside Left pointer: " + nums[leftPointer]);
+                System.out.println("Inside Right pointer: " + nums[rightPointer]);
+
+                if (currentSum == 0) {
+
+                    // Found a valid triplet
+                    result.add(
+                            Arrays.asList(
+                                    nums[i],
+                                    nums[leftPointer],
+                                    nums[rightPointer]
+                            )
+                    );
+
+                    // Skip duplicate second number
+                    while (leftPointer < rightPointer &&
+                            nums[leftPointer] == nums[leftPointer + 1]) {
+                        leftPointer++;
+                    }
+
+                    // Skip duplicate third number
+                    while (leftPointer < rightPointer &&
+                            nums[rightPointer] == nums[rightPointer - 1]) {
+                        rightPointer--;
+                    }
+
+                    // Move both pointers after storing result
+                    leftPointer++;
+                    rightPointer--;
+
+                } else if (currentSum < 0) {
+                    // Need a larger sum → move left pointer right
+                    leftPointer++;
+                } else {
+                    // Need a smaller sum → move right pointer left
+                    rightPointer--;
                 }
             }
-            firstIndex++;
         }
-        return new ArrayList<>();
+
+        return result;
     }
 }
