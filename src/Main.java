@@ -39,6 +39,7 @@ public class Main {
     TwoSumIIInput sumIIInput = new TwoSumIIInput();
     GroupAnagrams groupAnagrams = new GroupAnagrams();
     ThreeSum threeSum = new ThreeSum();
+    TrappingRainWater trappingRainWater = new TrappingRainWater();
 
     System.out.println();
 
@@ -652,6 +653,25 @@ public class Main {
              + "\nGiven array => " + Arrays.toString(threeSum1)
              + " -> Result: "
              + threeSum.threeSum(threeSum1));
+
+    /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+
+
+        /*----------------------------------------------------------------
+    ------------------------------------------------------------------*/
+    /* Leet Code 42. Trapping Rain Water TestCase */
+
+    int [] trap1 = {0,1,0,2,1,0,1,3,2,1,2,1};
+    int [] trap2 = {4,2,0,3,2,5};
+
+
+    // Leet Code 42. Trapping Rain Water TestCase
+    System.out.println();
+    System.out.println("Leet Code 42. Trapping Rain Water TestCase =>  "
+            + "\nGiven array => " + Arrays.toString(threeSum1)
+            + " -> Result: "
+            + trappingRainWater.trap(trap2));
 
     /*----------------------------------------------------------------
     ------------------------------------------------------------------*/
